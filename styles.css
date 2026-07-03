@@ -5,6 +5,7 @@
 :root{
   --blue:#1B4DD1; --blue-dark:#0E2E7A; --ink:#0F1A2E; --muted:#5A6B85;
   --faint:#8593AB; --line:#E4E9F2; --line2:#EEF2F8; --bg:#fff; --bg2:#F7F9FD; --chip:#EAF0FE;
+  --teal:#17B8C4; --chip2:#E6F8FA;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -76,6 +77,14 @@ h1.sm{font-size:50px}
 .divider{width:1px;height:34px;background:var(--line)}
 .placeholder{border-radius:18px;border:1px solid var(--line);background-image:repeating-linear-gradient(45deg,#EAF0FE,#EAF0FE 14px,#E1EAFC 14px,#E1EAFC 28px);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .placeholder .tag{position:relative;font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:var(--muted);background:#fff;padding:9px 16px;border-radius:100px;border:1px solid var(--line)}
+.photo{width:100%;border-radius:18px;border:1px solid var(--line);object-fit:cover}
+
+/* Wave divider — subtle blue/teal waves, endlessly drifting right-to-left */
+.wave-divider{position:relative;height:64px;overflow:hidden;margin-bottom:-1px}
+.wave-layer{position:absolute;left:0;right:0;top:-12px;height:calc(100% + 24px);background-repeat:repeat-x;background-size:1440px 100%}
+.wave-layer-1{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'><path d='M0,50 C120,20 240,20 360,50 C480,80 600,80 720,50 C840,20 960,20 1080,50 C1200,80 1320,80 1440,50 L1440,120 L0,120 Z' fill='%231B4DD1' fill-opacity='.05'/></svg>");animation:wave-flow 26s linear infinite}
+.wave-layer-2{background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'><path d='M0,70 C120,100 240,100 360,70 C480,40 600,40 720,70 C840,100 960,100 1080,70 C1200,40 1320,40 1440,70 L1440,120 L0,120 Z' fill='%2317B8C4' fill-opacity='.06'/></svg>");animation:wave-flow 16s linear infinite}
+@keyframes wave-flow{from{background-position-x:0}to{background-position-x:1440px}}
 
 /* Generic sections */
 section.block{padding:64px 0;border-top:1px solid var(--line2)}
@@ -114,12 +123,13 @@ h2.sm{font-size:30px}
 /* Cards */
 .cards4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff;transition:.15s}
-a.card:hover,.card.hover:hover{border-color:var(--blue);box-shadow:0 12px 30px -14px rgba(27,77,209,.4)}
+.card{border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff;transition:.2s ease}
+a.card:hover,.card.hover:hover{border-color:var(--blue);box-shadow:0 14px 32px -14px rgba(27,77,209,.4);transform:translateY(-3px)}
 .card .flag{font:700 15px 'Archivo';color:var(--blue)}
 .card h3{font:700 17px 'Archivo',sans-serif;margin-top:10px}
 .card p{font:400 13px/1.55 'Public Sans',sans-serif;color:var(--muted);margin-top:8px}
 .card .ico{width:46px;height:46px;border-radius:12px;background:var(--chip);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:22px}
+.cards3 .card:nth-child(even) .ico,.cards4 .card:nth-child(even) .ico{background:var(--chip2);color:var(--teal)}
 
 /* Why band */
 .why{background:var(--bg2)}
@@ -222,6 +232,18 @@ footer.site{background:var(--ink);color:#fff;padding:48px 0 32px}
 .modal-close:hover{background:rgba(255,255,255,.3)}
 .modal-body{padding:26px 30px 30px}
 
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(16px)}
+.reveal:not(.in){transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .card,a.card,.wave-layer{transition:none}
+  a.card:hover,.card.hover:hover{transform:none}
+  .wave-layer{animation:none}
+}
+
 @media(max-width:900px){
   .hero-grid,.two,.quote-grid,.fgrid4,.calc-grid{grid-template-columns:1fr}
   .steps.s5,.steps.s4,.cards4,.cards3,.keystats{grid-template-columns:1fr 1fr}
@@ -229,4 +251,5 @@ footer.site{background:var(--ink);color:#fff;padding:48px 0 32px}
   .calc-input{border-right:none;border-bottom:1px solid var(--line)}
   nav.main{display:none}
   h1,h1.sm{font-size:38px}
+  .wave-divider{height:40px}
 }

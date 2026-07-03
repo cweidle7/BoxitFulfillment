@@ -114,4 +114,54 @@
   }
 
   document.querySelectorAll("[data-calc]").forEach(wire);
+
+  /* ---------- Scroll reveal ---------- */
+  var revealGroups = document.querySelectorAll(".cards3, .cards4, .steps, .stats, .keystats, .faq-list");
+  revealGroups.forEach(function (group) {
+    Array.prototype.forEach.call(group.children, function (child, i) {
+      if (child.classList.contains("reveal")) {
+        child.style.transitionDelay = Math.min(i * 70, 280) + "ms";
+      }
+    });
+  });
+
+  var revealEls = document.querySelectorAll(".reveal");
+  if (window.IntersectionObserver) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: "0px 0px -8% 0px" });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add("in"); });
+  }
+
+  /* ---------- Light parallax on wave dividers ---------- */
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var parallaxEls = document.querySelectorAll("[data-parallax]");
+  if (parallaxEls.length && !reduceMotion) {
+    var ticking = false;
+    function updateParallax() {
+      var vh = window.innerHeight;
+      parallaxEls.forEach(function (el) {
+        var rect = el.getBoundingClientRect();
+        var center = rect.top + rect.height / 2;
+        var factor = parseFloat(el.getAttribute("data-parallax")) || 0;
+        var offset = Math.max(-16, Math.min(16, (center - vh / 2) * factor));
+        el.style.transform = "translateY(" + offset.toFixed(1) + "px)";
+      });
+      ticking = false;
+    }
+    window.addEventListener("scroll", function () {
+      if (!ticking) {
+        window.requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }, { passive: true });
+    updateParallax();
+  }
 })();
