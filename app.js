@@ -1,9 +1,40 @@
 /* ===================================================================
    Box It Fulfillment — shared JS
-   Handles: quote modal, International dropdown (touch), duty calculators
+   Handles: mobile menu, quote modal, International dropdown (touch),
+   duty calculators, scroll reveal, wave parallax
    =================================================================== */
 (function () {
   "use strict";
+
+  /* ---------- Mobile menu ---------- */
+  var header = document.querySelector("header.site");
+  var menuToggle = document.querySelector(".menu-toggle");
+  var ICON_MENU = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>';
+  var ICON_CLOSE = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>';
+  function closeMenu() {
+    if (!header) return;
+    header.classList.remove("menu-open");
+    if (menuToggle) {
+      menuToggle.setAttribute("aria-expanded", "false");
+      var icon = menuToggle.querySelector(".menu-toggle-icon");
+      if (icon) icon.innerHTML = ICON_MENU;
+    }
+  }
+  if (header && menuToggle) {
+    menuToggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var isOpen = header.classList.toggle("menu-open");
+      menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      var icon = menuToggle.querySelector(".menu-toggle-icon");
+      if (icon) icon.innerHTML = isOpen ? ICON_CLOSE : ICON_MENU;
+    });
+    document.addEventListener("click", function (e) {
+      if (header.classList.contains("menu-open") && !header.contains(e.target)) closeMenu();
+    });
+    document.querySelectorAll("nav.main > a").forEach(function (a) {
+      a.addEventListener("click", closeMenu);
+    });
+  }
 
   /* ---------- Quote modal ---------- */
   var modal = document.getElementById("quoteModal");
@@ -11,6 +42,7 @@
     if (!modal) return;
     modal.classList.add("open");
     document.body.style.overflow = "hidden";
+    closeMenu();
   }
   function closeQuote() {
     if (!modal) return;
@@ -29,7 +61,7 @@
     });
   }
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") closeQuote();
+    if (e.key === "Escape") { closeQuote(); closeMenu(); }
   });
 
   /* ---------- International dropdown (hover via CSS; click for touch) ---------- */

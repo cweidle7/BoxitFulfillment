@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shipping to Canada | Box It Fulfillment</title>
 <meta name="description" content="USMCA-ready fulfillment to Canada. Duty-free on qualifying goods, customs paperwork handled, no surprise fees. Duty &amp; tax calculator and FAQ.">
+<link rel="icon" type="image/svg+xml" href="Assets/Logo's/Boxit Logo.svg">
+<link rel="icon" type="image/png" href="Assets/Logo's/Boxit Logo.png">
+<link rel="apple-touch-icon" href="Assets/Logo's/Boxit Logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Box It Fulfillment">
+<meta property="og:title" content="Shipping to Canada | Box It Fulfillment">
+<meta property="og:description" content="USMCA-ready fulfillment to Canada. Duty-free on qualifying goods, customs paperwork handled, no surprise fees. Duty &amp; tax calculator and FAQ.">
+<meta property="og:url" content="https://boxitfulfillment.com/canada.html">
+<meta property="og:image" content="https://boxitfulfillment.com/Assets/imgi_14_E-CommerceFulfillmentBoxIT3PL.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shipping to Canada | Box It Fulfillment">
+<meta name="twitter:description" content="USMCA-ready fulfillment to Canada. Duty-free on qualifying goods, customs paperwork handled, no surprise fees. Duty &amp; tax calculator and FAQ.">
+<meta name="twitter:image" content="https://boxitfulfillment.com/Assets/imgi_14_E-CommerceFulfillmentBoxIT3PL.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -15,11 +28,12 @@
 <!-- ============ HEADER ============ -->
 <header class="site">
   <div class="navbar">
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav"><span class="menu-toggle-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></span></button>
     <a class="logo" href="index.html">
       <img src="Assets/Logo's/Horizonal_Logo.svg" alt="Box It 3PL" height="34">
       <span class="logo-sub">3PL · FULFILLMENT</span>
     </a>
-    <nav class="main">
+    <nav class="main" id="mainNav">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <div class="dropdown active" id="intlDropdown">
@@ -32,7 +46,6 @@
       </div>
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact</a>
-      <a href="blog.html">Blog</a>
     </nav>
     <button class="nav-cta" data-open-quote>Get a Quote<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
   </div>
@@ -177,7 +190,7 @@
       <div class="logo"><img src="Assets/Logo's/Horizonal_Logo.svg" alt="Box It 3PL" height="34"></div>
       <p style="font:400 13.5px/1.6 'Public Sans';color:#A9B6CE;margin-top:14px;max-width:270px">Your premier fulfillment partner. Optimize logistics, drive growth, and streamline operations with our expert solutions.</p>
     </div>
-    <div class="fcol"><div class="fhead">PAGES</div><a href="index.html">Home</a><a href="services.html">Services</a><a href="canada.html">International</a><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="blog.html">Blog</a></div>
+    <div class="fcol"><div class="fhead">PAGES</div><a href="index.html">Home</a><a href="services.html">Services</a><a href="canada.html">International</a><a href="about.html">About Us</a><a href="contact.html">Contact</a></div>
     <div class="fcol"><div class="fhead">LEGAL</div><a href="#">Terms of Service</a><a href="#">Privacy Policy</a><a href="contact.html">Contact Information</a><a href="usmca.html">USMCA Compliance</a></div>
     <div class="fcol"><div class="fhead">CONTACT</div><span>(877) 694-2424</span><span>support@boxitfulfillment.com</span><span>255 W Central Ave<br>Millcreek, UT 84107</span></div>
   </div>
@@ -195,14 +208,15 @@
     </div>
     <form class="modal-body" onsubmit="return false">
       <div class="fgrid">
-        <div class="field"><label>First Name *</label><input placeholder="Jane"></div>
-        <div class="field"><label>Last Name *</label><input placeholder="Doe"></div>
-        <div class="field"><label>Email *</label><input placeholder="jane@brand.com" type="email"></div>
-        <div class="field"><label>Company *</label><input placeholder="Brand Co."></div>
-        <div class="field"><label>Service Needs</label><select><option>Select a service</option><option>Fulfillment Services</option><option>Warehousing</option><option>Shipping Solutions</option><option>Inventory Management</option><option>Returns Processing</option><option>International Shipping</option></select></div>
-        <div class="field"><label>Monthly Volume</label><select><option>Select range</option><option>1–50 orders</option><option>51–200 orders</option><option>201–500 orders</option><option>501–1000 orders</option><option>1000+ orders</option></select></div>
+        <div class="field"><label>First Name *</label><input name="First Name" placeholder="Jane"></div>
+        <div class="field"><label>Last Name *</label><input name="Last Name" placeholder="Doe"></div>
+        <div class="field"><label>Email *</label><input name="Email" placeholder="jane@brand.com" type="email"></div>
+        <div class="field"><label>Company *</label><input name="Company" placeholder="Brand Co."></div>
+        <div class="field"><label>Service Needs</label><select name="Service Needs"><option>Select a service</option><option>Fulfillment Services</option><option>Warehousing</option><option>Shipping Solutions</option><option>Inventory Management</option><option>Returns Processing</option><option>International Shipping</option></select></div>
+        <div class="field"><label>Shipping To</label><select name="Shipping To"><option>Select destination</option><option>United States (domestic)</option><option selected>Canada</option><option>United Kingdom</option><option>European Union</option><option>Multiple / not sure</option></select></div>
       </div>
-      <div class="field full"><label>Message</label><textarea placeholder="Tell us about your products, destinations, and volume…"></textarea></div>
+      <div class="field full"><label>Monthly Volume</label><select name="Monthly Volume"><option>Select range</option><option>1–50 orders</option><option>51–200 orders</option><option>201–500 orders</option><option>501–1000 orders</option><option>1000+ orders</option></select></div>
+      <div class="field full"><label>Message</label><textarea name="Message" placeholder="Tell us about your products, destinations, and volume…"></textarea></div>
       <button class="btn btn-primary" style="width:100%;margin-top:18px">Send Message</button>
     </form>
   </div>
