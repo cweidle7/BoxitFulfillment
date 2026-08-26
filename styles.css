@@ -14,7 +14,7 @@ body{margin:0;font-family:'Public Sans',system-ui,sans-serif;color:var(--ink);ba
 a{text-decoration:none;color:inherit}
 h1,h2,h3,h4,p{margin:0}
 img{max-width:100%;display:block}
-.wrap{max-width:1280px;margin:0 auto;padding-left:40px;padding-right:40px}
+.wrap{max-width:1140px;margin:0 auto;padding-left:40px;padding-right:40px}
 
 /* Buttons */
 .btn{display:inline-block;font:600 15px 'Public Sans',sans-serif;padding:14px 26px;border-radius:8px;cursor:pointer;border:none;transition:background-color .15s ease,color .15s ease,border-color .15s ease}
@@ -31,7 +31,7 @@ img{max-width:100%;display:block}
 
 /* Header */
 header.site{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
-.navbar{display:flex;align-items:center;justify-content:space-between;padding:16px 40px;max-width:1280px;margin:0 auto}
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:16px 40px;max-width:1140px;margin:0 auto}
 .logo{display:flex;align-items:center;gap:12px}
 .logo img{height:34px;display:block}
 .logo-sub{font:600 8.5px/1 'IBM Plex Mono',monospace;letter-spacing:.22em;color:var(--faint)}
@@ -142,11 +142,25 @@ a.card:hover,.card.hover:hover{border-color:var(--blue);box-shadow:0 14px 32px -
 .why p{font:400 14px/1.6 'Public Sans',sans-serif;color:var(--muted);margin-top:8px}
 
 /* Partners */
-.partners{text-align:center}
+.partners{text-align:center;overflow:hidden}
 .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:22px}
 .chip{font:700 15px 'Archivo';color:var(--muted);border:1px solid var(--line);border-radius:7px;padding:10px 20px}
 .chips.left{justify-content:flex-start}
 .chips .chip.lg{font-size:16px;padding:14px 22px;background:#fff}
+
+/* Partners marquee */
+.marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.marquee+.marquee{margin-top:16px}
+.marquee-track{display:flex;width:max-content;gap:16px;animation:marquee-left 38s linear infinite}
+.marquee-track.reverse{animation-name:marquee-right}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.partner-card{flex:none;width:168px;height:92px;border:1px solid var(--line);border-radius:11px;background:#fff;display:flex;align-items:center;justify-content:center;padding:0 22px}
+.partner-card svg{height:26px;width:auto;max-width:100%;fill:var(--faint);transition:fill .2s ease}
+.partner-card:hover svg{fill:var(--brand,var(--faint))}
+.partner-card .wordmark{font:700 17px 'Archivo';color:var(--muted);transition:color .2s ease}
+.partner-card:hover .wordmark{color:var(--brand,var(--muted))}
+@keyframes marquee-left{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes marquee-right{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 
 /* Charges table (international) */
 .table-card{border:1px solid var(--line);border-radius:11px;overflow:hidden}
@@ -275,6 +289,7 @@ footer.site{background:var(--ink);color:#fff;padding:48px 0 32px}
   a.card:hover,.card.hover:hover{transform:none}
   .wave-layer{animation:none}
   .modal-overlay,.modal,nav.main,.dropdown-menu,.faq-a{transition:none}
+  .marquee-track{animation:none}
 }
 
 @media(max-width:900px){
@@ -285,8 +300,10 @@ footer.site{background:var(--ink);color:#fff;padding:48px 0 32px}
   h1,h1.sm{font-size:38px}
   .wave-divider{height:40px}
 
+  .navbar{gap:12px}
   .menu-toggle{display:flex}
   .logo-sub{display:none}
+  .nav-cta{margin-left:auto}
   nav.main{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#fff;border-bottom:1px solid var(--line);padding:4px 40px 18px;box-shadow:0 24px 48px -24px rgba(15,26,46,.35);max-height:calc(100vh - 67px);overflow-y:auto;opacity:0;transform:translateY(-8px);transition:opacity .18s ease,transform .18s ease,display .18s allow-discrete}
   header.site.menu-open nav.main{display:flex;opacity:1;transform:translateY(0)}
   @starting-style{
