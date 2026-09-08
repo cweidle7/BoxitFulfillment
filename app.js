@@ -148,7 +148,7 @@
   document.querySelectorAll("[data-calc]").forEach(wire);
 
   /* ---------- Scroll reveal ---------- */
-  var revealGroups = document.querySelectorAll(".cards3, .cards4, .steps, .stats, .keystats, .faq-list");
+  var revealGroups = document.querySelectorAll(".cards3, .steps, .keystats, .faq-list");
   revealGroups.forEach(function (group) {
     Array.prototype.forEach.call(group.children, function (child, i) {
       if (child.classList.contains("reveal")) {

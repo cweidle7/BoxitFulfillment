@@ -89,10 +89,6 @@ h1.sm{font-size:clamp(2.15rem,1.4rem + 2.6vw,3rem)}
 .hero-center .lede{margin-left:auto;margin-right:auto;max-width:600px}
 .hero-actions{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
 .hero-center .hero-actions{justify-content:center}
-.stats{display:flex;align-items:center;gap:22px;margin-top:38px;flex-wrap:wrap}
-.stat .n{font:800 26px 'Archivo',sans-serif}
-.stat .l{font:500 12.5px 'Public Sans',sans-serif;color:var(--faint)}
-.divider{width:1px;height:34px;background:var(--line)}
 .placeholder{border-radius:12px;border:1px solid var(--line);background-image:repeating-linear-gradient(45deg,#EAF0FE,#EAF0FE 14px,#E1EAFC 14px,#E1EAFC 28px);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .placeholder .tag{position:relative;font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:var(--muted);background:#fff;padding:9px 16px;border-radius:100px;border:1px solid var(--line)}
 .photo{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);object-fit:cover}
@@ -142,7 +138,6 @@ h2.sm{font-size:clamp(1.5rem,1.2rem + 1.3vw,1.9rem)}
 .step p{font:400 12.5px/1.5 'Public Sans',sans-serif;color:#A9B6CE}
 
 /* Cards */
-.cards4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .card{border:1px solid var(--line);border-radius:10px;padding:22px;background:#fff;transition:.2s ease}
 a.card:hover,.card.hover:hover{border-color:var(--blue);box-shadow:0 14px 32px -14px rgba(27,77,209,.4);transform:translateY(-3px)}
@@ -150,7 +145,7 @@ a.card:hover,.card.hover:hover{border-color:var(--blue);box-shadow:0 14px 32px -
 .card h3{font:700 17px 'Archivo',sans-serif;margin-top:10px}
 .card p{font:400 13px/1.55 'Public Sans',sans-serif;color:var(--muted);margin-top:8px}
 .card .ico{width:46px;height:46px;border-radius:9px;background:var(--chip);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:22px}
-.cards3 .card:nth-child(even) .ico,.cards4 .card:nth-child(even) .ico{background:var(--chip2);color:var(--teal)}
+.cards3 .card:nth-child(even) .ico{background:var(--chip2);color:var(--teal)}
 
 /* Why band */
 .why{background:var(--wash)}
@@ -160,7 +155,6 @@ a.card:hover,.card.hover:hover{border-color:var(--blue);box-shadow:0 14px 32px -
 .why p{font:400 14px/1.6 'Public Sans',sans-serif;color:var(--muted);margin-top:8px}
 
 /* Partners */
-.partners{text-align:center}
 .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:22px}
 .chip{font:700 15px 'Archivo';color:var(--muted);border:1px solid var(--line);border-radius:7px;padding:10px 20px}
 .chips.left{justify-content:flex-start}
@@ -360,7 +354,6 @@ footer.site{background:var(--ink);color:#fff;padding:48px 0 32px;border-top:3px 
 .bento-item .b-span{margin-top:auto;font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.08em;color:var(--faint)}
 .bento-item.col-3{grid-column:span 3}
 .bento-item.col-2{grid-column:span 2}
-.bento-item.col-4{grid-column:span 4}
 /* Image feature tiles */
 .bento-item.media{color:#fff;justify-content:flex-end;border-color:transparent;min-height:250px}
 .bento-item.media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
@@ -398,7 +391,7 @@ footer.site{background:var(--ink);color:#fff;padding:48px 0 32px;border-top:3px 
 @media(max-width:860px){
   .sec-intro.between{grid-template-columns:1fr}
   .bento{grid-template-columns:repeat(2,1fr)}
-  .bento-item.col-2,.bento-item.col-3,.bento-item.col-4{grid-column:span 1}
+  .bento-item.col-2,.bento-item.col-3{grid-column:span 1}
   .bento-item:nth-child(3),.bento-item.wide{grid-column:1 / -1}
 }
 @media(max-width:560px){
@@ -425,7 +418,7 @@ footer.site{background:var(--ink);color:#fff;padding:48px 0 32px;border-top:3px 
 
 @media(max-width:900px){
   .hero-grid,.two,.quote-grid,.fgrid4,.calc-grid{grid-template-columns:1fr}
-  .steps.s5,.steps.s4,.cards4,.cards3,.keystats{grid-template-columns:1fr 1fr}
+  .steps.s5,.steps.s4,.cards3,.keystats{grid-template-columns:1fr 1fr}
   .steps .rail{display:none}
   .calc-input{border-right:none;border-bottom:1px solid var(--line)}
   .wave-divider{height:40px}
