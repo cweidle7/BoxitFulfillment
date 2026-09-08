@@ -38,16 +38,35 @@
 
   /* ---------- Quote modal ---------- */
   var modal = document.getElementById("quoteModal");
+  var modalCard = modal && modal.querySelector(".modal");
+  var modalHeading = modal && modal.querySelector(".modal-head h3");
+  var lastFocused = null;
+  var FOCUSABLE = 'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])';
+
+  if (modalCard) {
+    modalCard.setAttribute("role", "dialog");
+    modalCard.setAttribute("aria-modal", "true");
+    if (modalHeading) {
+      if (!modalHeading.id) modalHeading.id = "quoteModalTitle";
+      modalCard.setAttribute("aria-labelledby", modalHeading.id);
+    }
+  }
+
   function openQuote() {
-    if (!modal) return;
+    if (!modal || modal.classList.contains("open")) return;
+    lastFocused = document.activeElement;
     modal.classList.add("open");
     document.body.style.overflow = "hidden";
     closeMenu();
+    var first = modalCard && modalCard.querySelector(FOCUSABLE);
+    if (first) requestAnimationFrame(function () { first.focus(); });
   }
   function closeQuote() {
-    if (!modal) return;
+    if (!modal || !modal.classList.contains("open")) return;
     modal.classList.remove("open");
     document.body.style.overflow = "";
+    if (lastFocused && typeof lastFocused.focus === "function") lastFocused.focus();
+    lastFocused = null;
   }
   document.querySelectorAll("[data-open-quote]").forEach(function (b) {
     b.addEventListener("click", openQuote);
@@ -62,18 +81,37 @@
   }
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") { closeQuote(); closeMenu(); }
+    /* trap Tab inside the open modal */
+    if (e.key === "Tab" && modal && modal.classList.contains("open") && modalCard) {
+      var items = Array.prototype.filter.call(
+        modalCard.querySelectorAll(FOCUSABLE),
+        function (el) { return el.offsetParent !== null; }
+      );
+      if (!items.length) return;
+      var firstEl = items[0], lastEl = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === firstEl) { e.preventDefault(); lastEl.focus(); }
+      else if (!e.shiftKey && document.activeElement === lastEl) { e.preventDefault(); firstEl.focus(); }
+    }
   });
 
   /* ---------- International dropdown (hover via CSS; click for touch) ---------- */
   var dd = document.getElementById("intlDropdown");
   if (dd) {
-    var btn = dd.querySelector("button");
-    btn.addEventListener("click", function (e) {
+    var ddBtn = dd.querySelector("button");
+    ddBtn.setAttribute("aria-expanded", "false");
+    ddBtn.setAttribute("aria-haspopup", "true");
+    function syncDd() { ddBtn.setAttribute("aria-expanded", dd.classList.contains("open") ? "true" : "false"); }
+    ddBtn.addEventListener("click", function (e) {
       e.stopPropagation();
       dd.classList.toggle("open");
+      syncDd();
     });
     document.addEventListener("click", function () {
       dd.classList.remove("open");
+      syncDd();
+    });
+    dd.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") { dd.classList.remove("open"); syncDd(); ddBtn.focus(); }
     });
   }
 

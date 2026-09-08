@@ -19,12 +19,21 @@
   --shadow-btn:0 10px 24px -10px rgba(27,77,209,.55);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{margin:0;font-family:'Public Sans',system-ui,sans-serif;color:var(--ink);background:var(--bg)}
 a{text-decoration:none;color:inherit}
 h1,h2,h3,h4,p{margin:0}
 img{max-width:100%;display:block}
 .wrap{max-width:var(--wrap);margin:0 auto;padding-left:clamp(20px,5vw,40px);padding-right:clamp(20px,5vw,40px)}
+
+/* Keyboard focus — visible ring everywhere, white on dark surfaces */
+a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{
+  outline:2px solid var(--blue-bright);outline-offset:3px;border-radius:4px}
+header.site a:focus-visible,header.site button:focus-visible,
+.process a:focus-visible,.process button:focus-visible,
+.about-numbers a:focus-visible,footer.site a:focus-visible,
+.cta-band a:focus-visible,.cta-band button:focus-visible,
+.contact-hero a:focus-visible,.modal-head button:focus-visible{outline-color:#fff}
 
 /* Buttons */
 .btn{display:inline-block;font:600 15px 'Public Sans',sans-serif;padding:14px 26px;border-radius:8px;cursor:pointer;border:none;transition:background-color .15s ease,color .15s ease,border-color .15s ease,box-shadow .18s ease,transform .18s ease}
@@ -58,7 +67,7 @@ nav.main a.active,nav.main a:hover{color:#fff}
 .dropdown>button:hover,.dropdown.active>button{color:#fff}
 .dropdown .caret{font-size:9px;color:rgba(255,255,255,.7)}
 .dropdown-menu{position:absolute;top:calc(100% + 18px);left:-18px;width:288px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 24px 50px -18px rgba(15,26,46,.4);padding:8px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .16s ease,visibility .16s ease,transform .16s ease}
-.dropdown.open .dropdown-menu,.dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.dropdown.open .dropdown-menu,.dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
 .dropdown-menu::before{content:"";position:absolute;top:-7px;left:34px;width:12px;height:12px;background:#fff;border-left:1px solid var(--line);border-top:1px solid var(--line);transform:rotate(45deg)}
 nav.main .dropdown-menu a{display:block;padding:11px 13px;border-radius:7px;color:var(--ink);transition:background-color .15s ease}
 .dropdown-menu a:hover,.dropdown-menu a.active{background:#F2F6FF}
@@ -245,7 +254,7 @@ a.card:hover,.card.hover:hover{border-color:var(--blue);box-shadow:0 14px 32px -
 .field{display:flex;flex-direction:column;gap:6px;min-width:0}
 .field label{font:600 12px 'Public Sans';color:var(--muted)}
 .field input,.field select,.field textarea{width:100%;min-width:0;border:1px solid #D8E0EE;border-radius:7px;padding:11px 13px;font:400 14px 'Public Sans';outline:none;background:#fff;transition:border-color .15s ease}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);outline:3px solid rgba(46,107,255,.18);outline-offset:0}
 .field textarea{min-height:80px;resize:vertical}
 .full{margin-top:14px}
 
@@ -296,7 +305,7 @@ footer.site{background:var(--ink);color:#fff;padding:48px 0 32px;border-top:3px 
 .hero-home-copy .hero-actions{margin-top:30px}
 
 .hero-home-media{position:relative}
-.hero-frame{position:relative;z-index:1;aspect-ratio:3/2;border-radius:var(--r-lg) 0 0 var(--r-lg);overflow:hidden;
+.hero-frame{position:relative;z-index:1;aspect-ratio:3/2;max-height:76vh;border-radius:var(--r-lg) 0 0 var(--r-lg);overflow:hidden;
   box-shadow:-40px 50px 90px -40px rgba(11,26,64,.55);background:#0B1220}
 .hero-frame video,.hero-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .hero-frame::after{content:"";position:absolute;inset:0;pointer-events:none;
@@ -376,8 +385,11 @@ footer.site{background:var(--ink);color:#fff;padding:48px 0 32px;border-top:3px 
 .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.4vw,28px)}
 .team-card{display:flex;flex-direction:column}
 .team-ph{position:relative;aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);
-  background:linear-gradient(155deg,#EDF2FD,#E2EBFB 55%,#D6E2F7);display:flex;align-items:center;justify-content:center}
-.team-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  background:linear-gradient(155deg,#EDF2FD,#E2EBFB 55%,#D6E2F7);display:flex;align-items:center;justify-content:center;
+  transition:transform .22s ease,box-shadow .22s ease}
+.team-card:hover .team-ph{transform:translateY(-4px);box-shadow:var(--shadow-card)}
+.team-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+.team-card:hover .team-ph img{transform:scale(1.04)}
 .team-ph .mono{font:800 clamp(32px,4vw,46px) 'Archivo',sans-serif;color:#AEC1E7;letter-spacing:.05em}
 .team-ph::after{content:"PHOTO TO COME";position:absolute;left:0;right:0;bottom:12px;text-align:center;
   font:600 9px 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#9DB0D0}
@@ -407,13 +419,13 @@ footer.site{background:var(--ink);color:#fff;padding:48px 0 32px;border-top:3px 
 .reveal.in{opacity:1;transform:translateY(0)}
 
 @media(prefers-reduced-motion:reduce){
-  .reveal{opacity:1;transform:none;transition:none}
-  .card,a.card,.wave-layer{transition:none}
-  a.card:hover,.card.hover:hover{transform:none}
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .reveal{opacity:1;transform:none}
+  a.card:hover,.card.hover:hover,.bento-item:hover,.btn:hover,.btn-white:hover{transform:none}
+  .sec-link:hover svg,.about-close a:hover svg{transform:none}
   .wave-layer{animation:none}
-  .bento-item:hover{transform:none}
   .logo-row{transform:none}
-  .modal-overlay,.modal,nav.main,.dropdown-menu,.faq-a{transition:none}
 }
 
 @media(max-width:900px){
