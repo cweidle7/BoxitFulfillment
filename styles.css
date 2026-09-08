@@ -461,6 +461,7 @@ footer.site{background:var(--ink);color:#fff;padding:48px 0 32px;border-top:3px 
 
 .about-sec{padding:clamp(48px,7vw,90px) 0;border-top:1px solid var(--line2)}
 .about-sec#values{background:var(--wash-teal)}
+.about-sec#standard{background:var(--wash)}
 .about-sec.dark{background:
   radial-gradient(820px 420px at 90% -20%,rgba(23,184,196,.18),transparent 60%),
   radial-gradient(680px 380px at 5% 120%,rgba(46,107,255,.22),transparent 60%),
@@ -489,9 +490,15 @@ footer.site{background:var(--ink);color:#fff;padding:48px 0 32px;border-top:3px 
   padding:26px 0;border-top:1px solid var(--line2)}
 .value:first-child{border-top:none}
 .value .vn{font:800 clamp(1.5rem,1rem + 1.8vw,2.3rem)/1 'Archivo',sans-serif;color:var(--blue)}
-.value:nth-child(2) .vn{color:var(--teal-deep)}
+.value:nth-child(even) .vn{color:var(--teal-deep)}
 .value h3{font:700 17px 'Archivo',sans-serif}
 .value p{font:400 14px/1.66 'Public Sans',sans-serif;color:var(--muted);margin-top:7px}
+
+/* The Standard — five questions */
+.standard{margin:22px 0 24px;display:flex;flex-direction:column;gap:14px}
+.standard li{list-style:none;display:flex;gap:13px;align-items:flex-start;
+  font:600 clamp(1rem,.95rem + .45vw,1.2rem)/1.4 'Archivo',sans-serif;color:var(--ink)}
+.standard li svg{flex:none;color:var(--blue);margin-top:3px}
 
 /* Dark numbers band */
 .about-numbers .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,3vw,32px)}
