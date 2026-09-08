@@ -172,8 +172,18 @@
     revealEls.forEach(function (el) { el.classList.add("in"); });
   }
 
-  /* ---------- Light parallax on wave dividers ---------- */
   var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- Respect reduced motion for autoplay videos ---------- */
+  if (reduceMotion) {
+    document.querySelectorAll("video[autoplay]").forEach(function (v) {
+      v.removeAttribute("autoplay");
+      v.setAttribute("controls", "");
+      try { v.pause(); v.currentTime = 0; } catch (e) {}
+    });
+  }
+
+  /* ---------- Light parallax on wave dividers ---------- */
   var parallaxEls = document.querySelectorAll("[data-parallax]");
   if (parallaxEls.length && !reduceMotion) {
     var ticking = false;

@@ -22,6 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
 
@@ -51,26 +52,34 @@
   </div>
 </header>
 
+<main>
+
 <!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
+<section class="hero hero-home">
+  <div class="hero-home-inner">
+    <div class="hero-home-copy">
       <span class="badge"><span class="dot"></span>3PL · FULFILLMENT · LOGISTICS</span>
-      <h1>The 3PL that still answers the phone</h1>
-      <p class="lede">We simplify warehousing and fulfillment for E-Commerce, B2B, Amazon, and DTC brands. Received, stored, and shipped quickly, correctly, and with care, so you can focus on growth.</p>
+      <h1>The 3PL that <span class="hl">still answers the phone</span></h1>
+      <p class="lede">Warehousing and fulfillment for e-commerce, B2B, Amazon, and DTC brands — received, stored, and shipped quickly, correctly, and with care, so you can get back to building the business.</p>
       <div class="hero-actions">
         <button class="btn btn-primary" data-open-quote>Get a Quote<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
         <a class="btn btn-ghost" href="#how">See how it works</a>
       </div>
-      <div class="stats">
-        <div class="stat reveal"><div class="n">100s</div><div class="l">merchants served</div></div>
-        <div class="divider"></div>
-        <div class="stat reveal"><div class="n">24hr</div><div class="l">quote turnaround</div></div>
-        <div class="divider"></div>
-        <div class="stat reveal"><div class="n">Global</div><div class="l">shipping reach</div></div>
+    </div>
+    <div class="hero-home-media">
+      <div class="hero-frame">
+        <video autoplay muted loop playsinline preload="metadata" poster="Assets/media/warehouse-packing-900.jpg" aria-label="Box It team scanning and packing customer orders on the warehouse floor">
+          <source src="Assets/media/video/WomanPackingBoxesBoxitFulfillment.mp4" type="video/mp4">
+          <img src="Assets/media/warehouse-packing-1400.jpg" alt="Box It team scanning and packing customer orders on the warehouse floor">
+        </video>
+        <span class="tag"><span class="dot"></span>Live from the floor</span>
+      </div>
+      <div class="hero-stats">
+        <div><strong>100s</strong><span>merchants served</span></div>
+        <div><strong>40+</strong><span>countries shipped to</span></div>
+        <div><strong>24 hr</strong><span>quote turnaround</span></div>
       </div>
     </div>
-    <div class="placeholder" style="aspect-ratio:5/4"><span class="tag">▶ warehouse / hero video</span></div>
   </div>
 </section>
 
@@ -79,18 +88,92 @@
   <div class="wave-layer wave-layer-2" data-parallax="0.12"></div>
 </div>
 
+<!-- ============ TRUSTED BY ============ -->
+<section class="logos" aria-label="Carrier and platform integrations">
+  <div class="wrap">
+    <span class="eyebrow">TRUSTED CARRIERS &amp; PLATFORM INTEGRATIONS</span>
+    <div class="logo-weave">
+      <div class="logo-row">
+        <img src="Assets/media/logos/fed.jpg" alt="FedEx" width="196" height="196" loading="lazy">
+        <img src="Assets/media/logos/ups.png" alt="UPS" width="206" height="245" loading="lazy">
+        <img src="Assets/media/logos/USPSLOGO.png" alt="USPS" width="370" height="185" loading="lazy">
+        <img src="Assets/media/logos/shopifylogo.png" alt="Shopify" width="370" height="185" loading="lazy">
+      </div>
+      <div class="logo-row">
+        <img src="Assets/media/logos/amazonlogo.png" alt="Amazon" width="370" height="185" loading="lazy">
+        <img src="Assets/media/logos/ebaylogo.png" alt="eBay" width="370" height="185" loading="lazy">
+        <img src="Assets/media/logos/Walmartlogo.png" alt="Walmart" width="370" height="185" loading="lazy">
+        <img src="Assets/media/logos/EtsyLogo.png" alt="Etsy" width="370" height="185" loading="lazy">
+      </div>
+      <div class="logo-row">
+        <img src="Assets/media/logos/woocommercelogo.png" alt="WooCommerce" width="370" height="185" loading="lazy">
+        <img src="Assets/media/logos/magentologo.png" alt="Magento" width="370" height="185" loading="lazy">
+        <img src="Assets/media/logos/SquareSpaceLogo.png" alt="Squarespace" width="370" height="185" loading="lazy">
+        <img src="Assets/media/logos/stampscomlogo.png" alt="Stamps.com" width="370" height="185" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ EXPERTISE ============ -->
 <section class="block">
   <div class="wrap two">
-    <img class="photo" style="aspect-ratio:4/3" src="Assets/imgi_14_E-CommerceFulfillmentBoxIT3PL.png" alt="Box It 3PL warehouse staff scanning and packing e-commerce orders">
+    <img class="photo" style="aspect-ratio:4/3" src="Assets/media/warehouse-packing-900.jpg" srcset="Assets/media/warehouse-packing-900.jpg 900w, Assets/media/warehouse-packing-1400.jpg 1400w" sizes="(min-width:900px) 48vw, 92vw" alt="Box It warehouse staff in branded uniforms scanning and packing e-commerce orders" width="900" height="675" loading="lazy">
     <div>
       <div class="eyebrow">OUR EXPERTISE</div>
       <h2 style="margin-top:12px">Large enough to deliver, small enough to care</h2>
-      <p class="lede">Efficiency is key in e-commerce. Our fulfillment services integrate directly with your online store for fast, accurate, reliable delivery. From warehousing and inventory management to pick, pack, and ship, we handle the logistics so you can focus on growing your business.</p>
+      <p class="lede">Efficiency is everything in e-commerce. Our fulfillment operation integrates directly with your online store for fast, accurate, reliable delivery. From warehousing and inventory management to pick, pack, and ship, we handle the logistics so you can focus on growing your business.</p>
       <div style="display:flex;flex-direction:column;gap:12px;margin-top:22px">
         <div class="check"><span class="i">✓</span>Direct Shopify, Amazon &amp; eBay integrations</div>
         <div class="check"><span class="i">✓</span>Real-time inventory &amp; order tracking</div>
         <div class="check"><span class="i">✓</span>On-demand manufacturing for nutritional startups</div>
+      </div>
+      <p style="font:500 13px/1.6 'Public Sans';color:var(--faint);margin-top:20px">A single U.S. team on the phone and the floor, so nothing gets lost in a handoff.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES BENTO ============ -->
+<section class="block why">
+  <div class="wrap">
+    <div class="sec-intro between">
+      <div>
+        <div class="eyebrow">WHAT WE DO</div>
+        <h2>One partner for the entire order journey</h2>
+        <p>Storage, fulfillment, technology, and cross-border shipping under one roof, sized to your volume and built to scale with it.</p>
+      </div>
+      <a class="sec-link" href="services.html">Explore all services<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+    <div class="bento">
+      <div class="bento-item col-2">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="M3.3 7 12 12l8.7-5"/><path d="M12 22V12"/></svg></div>
+        <h3>Order fulfillment</h3>
+        <p>Pick, pack, and ship the same day orders drop, packed carefully and on brand.</p>
+        <span class="b-span">PICK · PACK · SHIP</span>
+      </div>
+      <div class="bento-item col-2">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M2 11h20"/><path d="M4 11v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M10 15h4"/></svg></div>
+        <h3>Warehousing &amp; inventory</h3>
+        <p>Organized storage with real-time counts, low-stock alerts, and cycle checks.</p>
+        <span class="b-span">REAL-TIME VISIBILITY</span>
+      </div>
+      <div class="bento-item col-2">
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+        <h3>Integrations &amp; technology</h3>
+        <p>Your store, marketplaces, and carriers wired together so orders flow automatically.</p>
+        <span class="b-span">API &amp; PLUG-INS</span>
+      </div>
+      <div class="bento-item media col-3 wide">
+        <img src="Assets/media/global-network-1200.jpg" alt="Illuminated global logistics network connecting continents" width="1200" height="675" loading="lazy">
+        <h3>Global &amp; cross-border shipping</h3>
+        <p>Duties, taxes, and customs paperwork handled so parcels clear the border without surprises for your customer.</p>
+        <span class="b-span">CANADA · UK · EU</span>
+      </div>
+      <div class="bento-item media col-3 wide">
+        <img src="Assets/media/private-label-1400.jpg" srcset="Assets/media/private-label-800.jpg 800w, Assets/media/private-label-1400.jpg 1400w" sizes="(min-width:960px) 45vw, 90vw" alt="White supplement bottles in three sizes ready for private-label packing" width="800" height="500" loading="lazy">
+        <h3>Private label, kitting &amp; returns</h3>
+        <p>On-demand manufacturing for nutritional brands, custom bundles, and painless return processing.</p>
+        <span class="b-span">BUILD · BUNDLE · RESTOCK</span>
       </div>
     </div>
   </div>
@@ -117,14 +200,21 @@
 
 <!-- ============ INTERNATIONAL ============ -->
 <section class="block">
-  <div class="wrap">
-    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:34px">
-      <div>
-        <div class="eyebrow">INTERNATIONAL SHIPPING</div>
-        <h2 style="margin-top:12px">Expand your horizons, without the customs headache</h2>
-      </div>
-      <a href="canada.html" style="font:600 14px 'Public Sans';color:var(--blue);white-space:nowrap">All destinations →</a>
+  <div class="wrap two top">
+    <div>
+      <div class="eyebrow">INTERNATIONAL SHIPPING</div>
+      <h2 style="margin-top:12px">Expand your horizons, without the customs headache</h2>
+      <p class="lede">Selling across borders shouldn't mean surprise duties, held parcels, or angry customer emails. We manage the paperwork, thresholds, and carrier selection for every major destination, so international orders feel as routine as domestic ones.</p>
+      <a class="sec-link" style="margin-top:20px" href="canada.html">See all destinations<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
     </div>
+    <div class="intl-media">
+      <video autoplay muted loop playsinline preload="metadata" poster="Assets/media/global-network-1200.jpg" aria-label="Animated view of international shipping routes spanning the globe">
+        <source src="Assets/media/video/GlobalExpansionBoxIt3PL.mp4" type="video/mp4">
+        <img src="Assets/media/global-network-1800.jpg" alt="International shipping routes spanning the globe">
+      </video>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:clamp(28px,4vw,44px)">
     <div class="cards3">
       <a class="card reveal" href="canada.html"><div class="flag">Canada</div><h3>Shipping to Canada</h3><p>USMCA-eligible goods cross duty-free. We manage customs paperwork so parcels don't stall at the border.</p></a>
       <a class="card reveal" href="uk.html"><div class="flag">United Kingdom</div><h3>Shipping to the UK</h3><p>We handle UK VAT thresholds and customs declarations so your customers aren't hit with surprise fees.</p></a>
@@ -136,7 +226,7 @@
 <!-- ============ WHY BOXIT ============ -->
 <section class="block why">
   <div class="wrap">
-    <h2 style="text-align:center;margin-bottom:36px">Why Boxit 3PL?</h2>
+    <h2 style="text-align:center;margin-bottom:clamp(28px,4vw,40px)">Why Box It 3PL?</h2>
     <div class="cards3">
       <div class="card reveal"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></svg></div><h3>Tailored Solutions</h3><p>Customized to your business, whether a nutritional startup, a Shopify store, or an Amazon FBM merchant.</p></div>
       <div class="card reveal"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div><h3>Global Reach</h3><p>International shipping expertise helps you tap new markets and expand your customer base worldwide.</p></div>
@@ -145,50 +235,39 @@
   </div>
 </section>
 
-<!-- ============ PARTNERS ============ -->
-<section class="block partners">
+<!-- ============ MEET THE TEAM ============ -->
+<section class="block">
   <div class="wrap">
-    <h2 style="text-align:center">Our Partners</h2>
-    <p class="lede" style="text-align:center;margin-left:auto;margin-right:auto;margin-top:12px">Trusted by leading carriers and integration partners worldwide.</p>
-  </div>
-  <div class="marquee" style="margin-top:36px">
-    <div class="marquee-track">
-      <div class="partner-card" style="--brand:#E53238"><svg viewBox="0 0 24 24" aria-label="eBay"><path d="M6.056 12.132v-4.92h1.2v3.026c.59-.703 1.402-.906 2.202-.906 1.34 0 2.828.904 2.828 2.855 0 .233-.015.457-.06.668.24-.953 1.274-1.305 2.896-1.344.51-.018 1.095-.018 1.56-.018v-.135c0-.885-.556-1.244-1.53-1.244-.72 0-1.245.3-1.305.81h-1.275c.136-1.29 1.5-1.62 2.686-1.62 1.064 0 1.995.27 2.415 1.02l-.436-.84h1.41l2.055 4.125 2.055-4.126H24l-3.72 7.305h-1.346l1.07-2.04-2.33-4.38c.13.255.2.555.2.93v2.46c0 .346.01.69.04 1.005H16.8a6.543 6.543 0 01-.046-.765c-.603.734-1.32.96-2.32.96-1.48 0-2.272-.78-2.272-1.695 0-.15.015-.284.037-.405-.3 1.246-1.36 2.086-2.767 2.086-.87 0-1.694-.315-2.2-.93 0 .24-.015.494-.04.734h-1.18c.02-.39.04-.855.04-1.245v-1.05h-4.83c.065 1.095.818 1.74 1.853 1.74.718 0 1.355-.3 1.568-.93h1.24c-.24 1.29-1.61 1.725-2.79 1.725C.95 15.009 0 13.822 0 12.232c0-1.754.982-2.91 3.116-2.91 1.688 0 2.93.886 2.94 2.806v.005zm9.137.183c-1.095.034-1.77.233-1.77.95 0 .465.36.97 1.305.97 1.26 0 1.935-.69 1.935-1.814v-.13c-.45 0-.99.006-1.484.022h.012zm-6.06 1.875c1.11 0 1.876-.806 1.876-2.02s-.768-2.02-1.893-2.02c-1.11 0-1.89.806-1.89 2.02s.765 2.02 1.875 2.02h.03zm-4.35-2.514c-.044-1.125-.854-1.546-1.725-1.546-.944 0-1.694.474-1.815 1.546z"/></svg></div>
-      <div class="partner-card" style="--brand:#FF9900"><span class="wordmark">Amazon</span></div>
-      <div class="partner-card" style="--brand:#4D148C"><svg viewBox="0 0 24 24" aria-label="FedEx"><path d="M22.498 14.298c-.016-.414.345-.751.75-.755a.745.745 0 0 1 .752.755.755.755 0 0 1-.751.745c-.395.002-.759-.346-.751-.745zm.759-.083c.067-.02.164-.042.162-.13.007-.09-.086-.133-.162-.134h-.163v.263c0 .001.165-.002.163.001zm-.163.107v.418h-.14v-.91h.327c.156-.021.294.092.286.253a.218.218 0 0 1-.156.19c.162.083.108.322.173.467h-.156a2.355 2.355 0 0 1-.04-.205c-.018-.093-.047-.229-.17-.213h-.124zm.76-.024a.603.603 0 0 0-.605-.632c-.338-.012-.62.302-.605.632a.619.619 0 0 0 .605.622.61.61 0 0 0 .605-.622zm-5.052-.579l-.878 1.008h-1.306l1.559-1.745-1.56-1.75h1.355l.902.997.878-.998h1.306l-1.543 1.743 1.559 1.753h-1.371l-.901-1.008zm-4.703-.352v-.827h1.904v-1.506l1.724 1.948-1.724 1.941v-1.556h-1.904zm1.56 1.36h-3.2V9.044h3.224v1.024H13.77v1.163h1.888v.958h-1.904v1.522h1.904v1.016zm-5.705-.655c-.54.017-.878-.552-.877-1.04-.01-.507.307-1.123.878-1.105.579-.025.871.6.845 1.103.023.501-.29 1.062-.846 1.042zM4.743 12.41c.076-.358.403-.67.78-.663a.788.788 0 0 1 .803.663H4.743zm15.182.564l1.815-2.047h-2.125l-.74.844-.763-.844h-4.037v-.548h1.912V8.741H10.84v2.58c-.362-.448-.981-.559-1.526-.492-.782.123-1.427.762-1.634 1.514-.254-.958-1.179-1.588-2.157-1.554-.781.009-1.6.365-1.987 1.071v-.818h-1.87v-.9h2.043v-1.4H0v6.287h1.666v-2.644h1.666a7.59 7.59 0 0 0-.082.622c-.013 1.232 1.042 2.27 2.274 2.236a2.204 2.204 0 0 0 2.157-1.432H6.254c-.14.268-.441.38-.73.36-.457.009-.83-.417-.829-.86h2.914c.083 1.027.988 1.966 2.043 1.947a1.53 1.53 0 0 0 1.19-.639v.41h7.215l.754-.86.754.86h2.192l-1.832-2.055z"/></svg></div>
-      <div class="partner-card" style="--brand:#150400"><svg viewBox="0 0 24 24" aria-label="UPS"><path d="M11.668 14.544l-.028-5.226c.138-.055.387-.111.608-.111.995 0 1.41.774 1.41 2.682 0 1.853-.47 2.765-1.438 2.765-.22 0-.441-.055-.552-.11zM3.124 7.438c4.203-3.843 9.29-4.866 14.018-4.866 1.3 0 2.544.083 3.76.194h-.028v11.253c0 2.184-.774 3.926-2.295 5.171-1.355 1.134-5.447 2.959-6.581 3.456-1.161-.525-5.253-2.378-6.581-3.456-1.493-1.244-2.295-3.014-2.295-5.171V7.438zm12.664 2.599c.028.912.276 1.576 1.687 2.406.747.442 1.051.747 1.051 1.272 0 .581-.387.94-1.023.94-.553 0-1.189-.304-1.631-.691v1.576c.553.304 1.217.525 1.88.525 1.687 0 2.433-1.189 2.461-2.267.028-.995-.249-1.742-1.659-2.571-.608-.387-1.134-.636-1.106-1.244 0-.581.525-.802.995-.802.581 0 1.161.332 1.521.691V8.378c-.304-.221-.94-.581-1.88-.553-1.135.028-2.296.829-2.296 2.212zm-5.834 9.484h1.714l-.028-3.594c.166.028.415.083.774.083 1.908 0 2.986-1.687 2.986-4.175 0-2.461-1.106-4.009-3.152-4.009-.94 0-1.687.221-2.295.608v11.087zm-5.945-6.166c0 1.797.829 2.71 2.516 2.71 1.051 0 1.908-.249 2.571-.691V7.991H7.41v6.387c-.194.138-.47.221-.802.221-.774 0-.885-.719-.885-1.189V7.991H4.009v5.364zM22.12 2.295v11.723c0 2.516-.94 4.645-2.765 6.111-1.549 1.3-6.332 3.429-7.355 3.871-1.023-.442-5.806-2.571-7.355-3.843-1.797-1.465-2.765-3.594-2.765-6.111V2.295C4.756.747 8.074 0 12 0s7.244.747 10.12 2.295zm-.304.221c-2.71-1.465-6-2.184-9.788-2.184s-7.079.746-9.788 2.184v11.502c0 2.433.912 4.452 2.627 5.862 1.576 1.3 6.581 3.484 7.161 3.76.581-.249 5.585-2.433 7.161-3.733 1.714-1.41 2.627-3.429 2.627-5.862V2.516zm-2.433 20.295c0 .47-.387.829-.829.829a.831.831 0 0 1-.829-.829c0-.47.387-.829.829-.829.441 0 .801.359.829.829zm-.166 0a.679.679 0 0 0-.664-.691c-.359 0-.664.332-.664.691 0 .359.304.664.664.664a.673.673 0 0 0 .664-.664zm-.553.055c.028.055.304.442.304.442h-.221s-.276-.387-.276-.415h-.028v.415h-.194v-.995l.304-.028c.249 0 .332.166.332.304s-.083.25-.221.277zm.027-.276c0-.055 0-.138-.166-.138h-.083v.304h.028c.194 0 .221-.083.221-.166z"/></svg></div>
-      <div class="partner-card" style="--brand:#333366"><svg viewBox="0 0 24 24" aria-label="USPS"><path d="M3.145 4.577L0 19.423h20.855L24 4.577H3.145zm-.157 3.806h9.436c.157 0 5.064 0 5.159.975H9.09l1.321 4.026c1.51-.723 5.222-2.233 7.455-2.328.944-.031 1.321.126 1.132.252-.126.063-1.038.189-1.761.377-1.258.315-1.321.315-2.642.755-1.478.503-2.705 1.069-4.53 1.919L.723 18.983l2.265-10.6zm16.483 1.698c-.535-.094-2.768.063-3.334.063-.126 0-.472.031-.472-.063 0-.063.126-.063.377-.094s1.006-.157 1.258-.283c.063-.063.22-.157.315-.252.031-.063.063-.094.157-.094h1.164c.755 0 1.195.094 1.132.723-.031.315-.472 1.132-.629 1.384-.063.094-.189.189-.157 0 .126-.503.597-1.321.189-1.384zm.88 8.902H2.076s17.363-6.794 17.552-6.92c0 0 1.541-2.076.629-2.925-.283-.283-.692-.283-2.265-.283 0 0-.063-.598-2.485-1.164-.283-.063-11.858-2.517-11.858-2.517h19.628l-2.926 13.809zm2.925-.695c0-.195-.114-.293-.358-.293h-.406v1.008h.146v-.439h.179l.276.455h.179L23 18.564c.162-.016.276-.097.276-.276zm-.455.146h-.163v-.341h.211c.114 0 .228.016.228.163 0 .162-.13.178-.276.178zm.016-.829a.868.868 0 0 0-.894.878c0 .504.406.894.894.894s.894-.39.894-.894a.878.878 0 0 0-.894-.878zm0 1.642c-.423 0-.731-.325-.731-.764 0-.423.325-.748.731-.748.406 0 .731.325.731.748 0 .439-.325.764-.731.764z"/></svg></div>
-      <div class="partner-card" style="--brand:#FFCC00"><svg viewBox="0 0 24 24" aria-label="DHL"><path d="M4.22 10.303l-.767 1.043h4.18c.21 0 .208.078.105.218-.105.142-.28.39-.386.534-.054.073-.154.207.171.207h1.71l.505-.69c.314-.426.028-1.312-1.095-1.312H4.22zm7.204 0l-1.475 2.002h5.39l1.473-2.002H14.61l-.843 1.146h-.985l.846-1.146h-2.203zm6.105 0l-1.474 2.002h2.334l1.472-2.002H17.53zm-12.845 1.3l-1.54 2.094h3.754c1.24 0 1.932-.844 2.145-1.136h-2.56c-.326 0-.226-.133-.172-.207.107-.143.283-.388.388-.53.104-.14.107-.22-.105-.22h-1.91zM0 12.562v.242h3.398l.176-.242H0zm9.762 0l-.836 1.136h2.203l.836-1.136H9.762zm3.185 0l-.836 1.136h2.203l.836-1.136h-2.203zm2.918 0s-.159.22-.238.326c-.276.374-.033.81.87.81h3.538l.834-1.136h-5.004zm5.408 0l-.177.242H24v-.242h-2.727zM0 13.01v.24h3.068l.178-.24H0zm20.943 0l-.175.24H24v-.24h-3.057zM0 13.457v.24h2.74l.176-.24H0zm20.615 0l-.177.24H24v-.24h-3.385z"/></svg></div>
-      <div class="partner-card" style="--brand:#7AB55C"><svg viewBox="0 0 24 24" aria-label="Shopify"><path d="M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411c-.045-.037-.075-.057-.121-.074l-.914 21.104h.023zM11.71 11.305s-.81-.424-1.774-.424c-1.447 0-1.504.906-1.504 1.141 0 1.232 3.24 1.715 3.24 4.629 0 2.295-1.44 3.76-3.406 3.76-2.354 0-3.54-1.465-3.54-1.465l.646-2.086s1.245 1.066 2.28 1.066c.675 0 .975-.545.975-.932 0-1.619-2.654-1.694-2.654-4.359-.034-2.237 1.571-4.416 4.827-4.416 1.257 0 1.875.361 1.875.361l-.945 2.715-.02.01zM11.17.83c.136 0 .271.038.405.135-.984.465-2.064 1.639-2.508 3.992-.656.213-1.293.405-1.889.578C7.697 3.75 8.951.84 11.17.84V.83zm1.235 2.949v.135c-.754.232-1.583.484-2.394.736.466-1.777 1.333-2.645 2.085-2.971.193.501.309 1.176.309 2.1zm.539-2.234c.694.074 1.141.867 1.429 1.755-.349.114-.735.231-1.158.366v-.252c0-.752-.096-1.371-.271-1.871v.002zm2.992 1.289c-.02 0-.06.021-.078.021s-.289.075-.714.21c-.423-1.233-1.176-2.37-2.508-2.37h-.115C12.135.209 11.669 0 11.265 0 8.159 0 6.675 3.877 6.21 5.846c-1.194.365-2.063.636-2.16.674-.675.213-.694.232-.772.87-.075.462-1.83 14.063-1.83 14.063L15.009 24l.927-21.166z"/></svg></div>
-      <div class="partner-card"><span class="wordmark">Cirro</span></div>
-      <div class="partner-card" style="--brand:#E53238"><svg viewBox="0 0 24 24" aria-label="eBay"><path d="M6.056 12.132v-4.92h1.2v3.026c.59-.703 1.402-.906 2.202-.906 1.34 0 2.828.904 2.828 2.855 0 .233-.015.457-.06.668.24-.953 1.274-1.305 2.896-1.344.51-.018 1.095-.018 1.56-.018v-.135c0-.885-.556-1.244-1.53-1.244-.72 0-1.245.3-1.305.81h-1.275c.136-1.29 1.5-1.62 2.686-1.62 1.064 0 1.995.27 2.415 1.02l-.436-.84h1.41l2.055 4.125 2.055-4.126H24l-3.72 7.305h-1.346l1.07-2.04-2.33-4.38c.13.255.2.555.2.93v2.46c0 .346.01.69.04 1.005H16.8a6.543 6.543 0 01-.046-.765c-.603.734-1.32.96-2.32.96-1.48 0-2.272-.78-2.272-1.695 0-.15.015-.284.037-.405-.3 1.246-1.36 2.086-2.767 2.086-.87 0-1.694-.315-2.2-.93 0 .24-.015.494-.04.734h-1.18c.02-.39.04-.855.04-1.245v-1.05h-4.83c.065 1.095.818 1.74 1.853 1.74.718 0 1.355-.3 1.568-.93h1.24c-.24 1.29-1.61 1.725-2.79 1.725C.95 15.009 0 13.822 0 12.232c0-1.754.982-2.91 3.116-2.91 1.688 0 2.93.886 2.94 2.806v.005zm9.137.183c-1.095.034-1.77.233-1.77.95 0 .465.36.97 1.305.97 1.26 0 1.935-.69 1.935-1.814v-.13c-.45 0-.99.006-1.484.022h.012zm-6.06 1.875c1.11 0 1.876-.806 1.876-2.02s-.768-2.02-1.893-2.02c-1.11 0-1.89.806-1.89 2.02s.765 2.02 1.875 2.02h.03zm-4.35-2.514c-.044-1.125-.854-1.546-1.725-1.546-.944 0-1.694.474-1.815 1.546z"/></svg></div>
-      <div class="partner-card" style="--brand:#FF9900"><span class="wordmark">Amazon</span></div>
-      <div class="partner-card" style="--brand:#4D148C"><svg viewBox="0 0 24 24" aria-label="FedEx"><path d="M22.498 14.298c-.016-.414.345-.751.75-.755a.745.745 0 0 1 .752.755.755.755 0 0 1-.751.745c-.395.002-.759-.346-.751-.745zm.759-.083c.067-.02.164-.042.162-.13.007-.09-.086-.133-.162-.134h-.163v.263c0 .001.165-.002.163.001zm-.163.107v.418h-.14v-.91h.327c.156-.021.294.092.286.253a.218.218 0 0 1-.156.19c.162.083.108.322.173.467h-.156a2.355 2.355 0 0 1-.04-.205c-.018-.093-.047-.229-.17-.213h-.124zm.76-.024a.603.603 0 0 0-.605-.632c-.338-.012-.62.302-.605.632a.619.619 0 0 0 .605.622.61.61 0 0 0 .605-.622zm-5.052-.579l-.878 1.008h-1.306l1.559-1.745-1.56-1.75h1.355l.902.997.878-.998h1.306l-1.543 1.743 1.559 1.753h-1.371l-.901-1.008zm-4.703-.352v-.827h1.904v-1.506l1.724 1.948-1.724 1.941v-1.556h-1.904zm1.56 1.36h-3.2V9.044h3.224v1.024H13.77v1.163h1.888v.958h-1.904v1.522h1.904v1.016zm-5.705-.655c-.54.017-.878-.552-.877-1.04-.01-.507.307-1.123.878-1.105.579-.025.871.6.845 1.103.023.501-.29 1.062-.846 1.042zM4.743 12.41c.076-.358.403-.67.78-.663a.788.788 0 0 1 .803.663H4.743zm15.182.564l1.815-2.047h-2.125l-.74.844-.763-.844h-4.037v-.548h1.912V8.741H10.84v2.58c-.362-.448-.981-.559-1.526-.492-.782.123-1.427.762-1.634 1.514-.254-.958-1.179-1.588-2.157-1.554-.781.009-1.6.365-1.987 1.071v-.818h-1.87v-.9h2.043v-1.4H0v6.287h1.666v-2.644h1.666a7.59 7.59 0 0 0-.082.622c-.013 1.232 1.042 2.27 2.274 2.236a2.204 2.204 0 0 0 2.157-1.432H6.254c-.14.268-.441.38-.73.36-.457.009-.83-.417-.829-.86h2.914c.083 1.027.988 1.966 2.043 1.947a1.53 1.53 0 0 0 1.19-.639v.41h7.215l.754-.86.754.86h2.192l-1.832-2.055z"/></svg></div>
-      <div class="partner-card" style="--brand:#150400"><svg viewBox="0 0 24 24" aria-label="UPS"><path d="M11.668 14.544l-.028-5.226c.138-.055.387-.111.608-.111.995 0 1.41.774 1.41 2.682 0 1.853-.47 2.765-1.438 2.765-.22 0-.441-.055-.552-.11zM3.124 7.438c4.203-3.843 9.29-4.866 14.018-4.866 1.3 0 2.544.083 3.76.194h-.028v11.253c0 2.184-.774 3.926-2.295 5.171-1.355 1.134-5.447 2.959-6.581 3.456-1.161-.525-5.253-2.378-6.581-3.456-1.493-1.244-2.295-3.014-2.295-5.171V7.438zm12.664 2.599c.028.912.276 1.576 1.687 2.406.747.442 1.051.747 1.051 1.272 0 .581-.387.94-1.023.94-.553 0-1.189-.304-1.631-.691v1.576c.553.304 1.217.525 1.88.525 1.687 0 2.433-1.189 2.461-2.267.028-.995-.249-1.742-1.659-2.571-.608-.387-1.134-.636-1.106-1.244 0-.581.525-.802.995-.802.581 0 1.161.332 1.521.691V8.378c-.304-.221-.94-.581-1.88-.553-1.135.028-2.296.829-2.296 2.212zm-5.834 9.484h1.714l-.028-3.594c.166.028.415.083.774.083 1.908 0 2.986-1.687 2.986-4.175 0-2.461-1.106-4.009-3.152-4.009-.94 0-1.687.221-2.295.608v11.087zm-5.945-6.166c0 1.797.829 2.71 2.516 2.71 1.051 0 1.908-.249 2.571-.691V7.991H7.41v6.387c-.194.138-.47.221-.802.221-.774 0-.885-.719-.885-1.189V7.991H4.009v5.364zM22.12 2.295v11.723c0 2.516-.94 4.645-2.765 6.111-1.549 1.3-6.332 3.429-7.355 3.871-1.023-.442-5.806-2.571-7.355-3.843-1.797-1.465-2.765-3.594-2.765-6.111V2.295C4.756.747 8.074 0 12 0s7.244.747 10.12 2.295zm-.304.221c-2.71-1.465-6-2.184-9.788-2.184s-7.079.746-9.788 2.184v11.502c0 2.433.912 4.452 2.627 5.862 1.576 1.3 6.581 3.484 7.161 3.76.581-.249 5.585-2.433 7.161-3.733 1.714-1.41 2.627-3.429 2.627-5.862V2.516zm-2.433 20.295c0 .47-.387.829-.829.829a.831.831 0 0 1-.829-.829c0-.47.387-.829.829-.829.441 0 .801.359.829.829zm-.166 0a.679.679 0 0 0-.664-.691c-.359 0-.664.332-.664.691 0 .359.304.664.664.664a.673.673 0 0 0 .664-.664zm-.553.055c.028.055.304.442.304.442h-.221s-.276-.387-.276-.415h-.028v.415h-.194v-.995l.304-.028c.249 0 .332.166.332.304s-.083.25-.221.277zm.027-.276c0-.055 0-.138-.166-.138h-.083v.304h.028c.194 0 .221-.083.221-.166z"/></svg></div>
-      <div class="partner-card" style="--brand:#333366"><svg viewBox="0 0 24 24" aria-label="USPS"><path d="M3.145 4.577L0 19.423h20.855L24 4.577H3.145zm-.157 3.806h9.436c.157 0 5.064 0 5.159.975H9.09l1.321 4.026c1.51-.723 5.222-2.233 7.455-2.328.944-.031 1.321.126 1.132.252-.126.063-1.038.189-1.761.377-1.258.315-1.321.315-2.642.755-1.478.503-2.705 1.069-4.53 1.919L.723 18.983l2.265-10.6zm16.483 1.698c-.535-.094-2.768.063-3.334.063-.126 0-.472.031-.472-.063 0-.063.126-.063.377-.094s1.006-.157 1.258-.283c.063-.063.22-.157.315-.252.031-.063.063-.094.157-.094h1.164c.755 0 1.195.094 1.132.723-.031.315-.472 1.132-.629 1.384-.063.094-.189.189-.157 0 .126-.503.597-1.321.189-1.384zm.88 8.902H2.076s17.363-6.794 17.552-6.92c0 0 1.541-2.076.629-2.925-.283-.283-.692-.283-2.265-.283 0 0-.063-.598-2.485-1.164-.283-.063-11.858-2.517-11.858-2.517h19.628l-2.926 13.809zm2.925-.695c0-.195-.114-.293-.358-.293h-.406v1.008h.146v-.439h.179l.276.455h.179L23 18.564c.162-.016.276-.097.276-.276zm-.455.146h-.163v-.341h.211c.114 0 .228.016.228.163 0 .162-.13.178-.276.178zm.016-.829a.868.868 0 0 0-.894.878c0 .504.406.894.894.894s.894-.39.894-.894a.878.878 0 0 0-.894-.878zm0 1.642c-.423 0-.731-.325-.731-.764 0-.423.325-.748.731-.748.406 0 .731.325.731.748 0 .439-.325.764-.731.764z"/></svg></div>
-      <div class="partner-card" style="--brand:#FFCC00"><svg viewBox="0 0 24 24" aria-label="DHL"><path d="M4.22 10.303l-.767 1.043h4.18c.21 0 .208.078.105.218-.105.142-.28.39-.386.534-.054.073-.154.207.171.207h1.71l.505-.69c.314-.426.028-1.312-1.095-1.312H4.22zm7.204 0l-1.475 2.002h5.39l1.473-2.002H14.61l-.843 1.146h-.985l.846-1.146h-2.203zm6.105 0l-1.474 2.002h2.334l1.472-2.002H17.53zm-12.845 1.3l-1.54 2.094h3.754c1.24 0 1.932-.844 2.145-1.136h-2.56c-.326 0-.226-.133-.172-.207.107-.143.283-.388.388-.53.104-.14.107-.22-.105-.22h-1.91zM0 12.562v.242h3.398l.176-.242H0zm9.762 0l-.836 1.136h2.203l.836-1.136H9.762zm3.185 0l-.836 1.136h2.203l.836-1.136h-2.203zm2.918 0s-.159.22-.238.326c-.276.374-.033.81.87.81h3.538l.834-1.136h-5.004zm5.408 0l-.177.242H24v-.242h-2.727zM0 13.01v.24h3.068l.178-.24H0zm20.943 0l-.175.24H24v-.24h-3.057zM0 13.457v.24h2.74l.176-.24H0zm20.615 0l-.177.24H24v-.24h-3.385z"/></svg></div>
-      <div class="partner-card" style="--brand:#7AB55C"><svg viewBox="0 0 24 24" aria-label="Shopify"><path d="M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411c-.045-.037-.075-.057-.121-.074l-.914 21.104h.023zM11.71 11.305s-.81-.424-1.774-.424c-1.447 0-1.504.906-1.504 1.141 0 1.232 3.24 1.715 3.24 4.629 0 2.295-1.44 3.76-3.406 3.76-2.354 0-3.54-1.465-3.54-1.465l.646-2.086s1.245 1.066 2.28 1.066c.675 0 .975-.545.975-.932 0-1.619-2.654-1.694-2.654-4.359-.034-2.237 1.571-4.416 4.827-4.416 1.257 0 1.875.361 1.875.361l-.945 2.715-.02.01zM11.17.83c.136 0 .271.038.405.135-.984.465-2.064 1.639-2.508 3.992-.656.213-1.293.405-1.889.578C7.697 3.75 8.951.84 11.17.84V.83zm1.235 2.949v.135c-.754.232-1.583.484-2.394.736.466-1.777 1.333-2.645 2.085-2.971.193.501.309 1.176.309 2.1zm.539-2.234c.694.074 1.141.867 1.429 1.755-.349.114-.735.231-1.158.366v-.252c0-.752-.096-1.371-.271-1.871v.002zm2.992 1.289c-.02 0-.06.021-.078.021s-.289.075-.714.21c-.423-1.233-1.176-2.37-2.508-2.37h-.115C12.135.209 11.669 0 11.265 0 8.159 0 6.675 3.877 6.21 5.846c-1.194.365-2.063.636-2.16.674-.675.213-.694.232-.772.87-.075.462-1.83 14.063-1.83 14.063L15.009 24l.927-21.166z"/></svg></div>
-      <div class="partner-card"><span class="wordmark">Cirro</span></div>
+    <div class="sec-intro">
+      <div class="eyebrow">MEET THE TEAM</div>
+      <h2>A women-led team, from the founder to the floor</h2>
+      <p>Box It is run by women at every level — strategy, warehouse operations, compliance, and the account managers you'll actually talk to. It's the same group that has held order accuracy at 100% since 2019. Here's who you'll be working with.</p>
     </div>
-  </div>
-  <div class="marquee">
-    <div class="marquee-track reverse">
-      <div class="partner-card"><span class="wordmark">Cirro</span></div>
-      <div class="partner-card" style="--brand:#7AB55C"><svg viewBox="0 0 24 24" aria-label="Shopify"><path d="M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411c-.045-.037-.075-.057-.121-.074l-.914 21.104h.023zM11.71 11.305s-.81-.424-1.774-.424c-1.447 0-1.504.906-1.504 1.141 0 1.232 3.24 1.715 3.24 4.629 0 2.295-1.44 3.76-3.406 3.76-2.354 0-3.54-1.465-3.54-1.465l.646-2.086s1.245 1.066 2.28 1.066c.675 0 .975-.545.975-.932 0-1.619-2.654-1.694-2.654-4.359-.034-2.237 1.571-4.416 4.827-4.416 1.257 0 1.875.361 1.875.361l-.945 2.715-.02.01zM11.17.83c.136 0 .271.038.405.135-.984.465-2.064 1.639-2.508 3.992-.656.213-1.293.405-1.889.578C7.697 3.75 8.951.84 11.17.84V.83zm1.235 2.949v.135c-.754.232-1.583.484-2.394.736.466-1.777 1.333-2.645 2.085-2.971.193.501.309 1.176.309 2.1zm.539-2.234c.694.074 1.141.867 1.429 1.755-.349.114-.735.231-1.158.366v-.252c0-.752-.096-1.371-.271-1.871v.002zm2.992 1.289c-.02 0-.06.021-.078.021s-.289.075-.714.21c-.423-1.233-1.176-2.37-2.508-2.37h-.115C12.135.209 11.669 0 11.265 0 8.159 0 6.675 3.877 6.21 5.846c-1.194.365-2.063.636-2.16.674-.675.213-.694.232-.772.87-.075.462-1.83 14.063-1.83 14.063L15.009 24l.927-21.166z"/></svg></div>
-      <div class="partner-card" style="--brand:#FFCC00"><svg viewBox="0 0 24 24" aria-label="DHL"><path d="M4.22 10.303l-.767 1.043h4.18c.21 0 .208.078.105.218-.105.142-.28.39-.386.534-.054.073-.154.207.171.207h1.71l.505-.69c.314-.426.028-1.312-1.095-1.312H4.22zm7.204 0l-1.475 2.002h5.39l1.473-2.002H14.61l-.843 1.146h-.985l.846-1.146h-2.203zm6.105 0l-1.474 2.002h2.334l1.472-2.002H17.53zm-12.845 1.3l-1.54 2.094h3.754c1.24 0 1.932-.844 2.145-1.136h-2.56c-.326 0-.226-.133-.172-.207.107-.143.283-.388.388-.53.104-.14.107-.22-.105-.22h-1.91zM0 12.562v.242h3.398l.176-.242H0zm9.762 0l-.836 1.136h2.203l.836-1.136H9.762zm3.185 0l-.836 1.136h2.203l.836-1.136h-2.203zm2.918 0s-.159.22-.238.326c-.276.374-.033.81.87.81h3.538l.834-1.136h-5.004zm5.408 0l-.177.242H24v-.242h-2.727zM0 13.01v.24h3.068l.178-.24H0zm20.943 0l-.175.24H24v-.24h-3.057zM0 13.457v.24h2.74l.176-.24H0zm20.615 0l-.177.24H24v-.24h-3.385z"/></svg></div>
-      <div class="partner-card" style="--brand:#333366"><svg viewBox="0 0 24 24" aria-label="USPS"><path d="M3.145 4.577L0 19.423h20.855L24 4.577H3.145zm-.157 3.806h9.436c.157 0 5.064 0 5.159.975H9.09l1.321 4.026c1.51-.723 5.222-2.233 7.455-2.328.944-.031 1.321.126 1.132.252-.126.063-1.038.189-1.761.377-1.258.315-1.321.315-2.642.755-1.478.503-2.705 1.069-4.53 1.919L.723 18.983l2.265-10.6zm16.483 1.698c-.535-.094-2.768.063-3.334.063-.126 0-.472.031-.472-.063 0-.063.126-.063.377-.094s1.006-.157 1.258-.283c.063-.063.22-.157.315-.252.031-.063.063-.094.157-.094h1.164c.755 0 1.195.094 1.132.723-.031.315-.472 1.132-.629 1.384-.063.094-.189.189-.157 0 .126-.503.597-1.321.189-1.384zm.88 8.902H2.076s17.363-6.794 17.552-6.92c0 0 1.541-2.076.629-2.925-.283-.283-.692-.283-2.265-.283 0 0-.063-.598-2.485-1.164-.283-.063-11.858-2.517-11.858-2.517h19.628l-2.926 13.809zm2.925-.695c0-.195-.114-.293-.358-.293h-.406v1.008h.146v-.439h.179l.276.455h.179L23 18.564c.162-.016.276-.097.276-.276zm-.455.146h-.163v-.341h.211c.114 0 .228.016.228.163 0 .162-.13.178-.276.178zm.016-.829a.868.868 0 0 0-.894.878c0 .504.406.894.894.894s.894-.39.894-.894a.878.878 0 0 0-.894-.878zm0 1.642c-.423 0-.731-.325-.731-.764 0-.423.325-.748.731-.748.406 0 .731.325.731.748 0 .439-.325.764-.731.764z"/></svg></div>
-      <div class="partner-card" style="--brand:#150400"><svg viewBox="0 0 24 24" aria-label="UPS"><path d="M11.668 14.544l-.028-5.226c.138-.055.387-.111.608-.111.995 0 1.41.774 1.41 2.682 0 1.853-.47 2.765-1.438 2.765-.22 0-.441-.055-.552-.11zM3.124 7.438c4.203-3.843 9.29-4.866 14.018-4.866 1.3 0 2.544.083 3.76.194h-.028v11.253c0 2.184-.774 3.926-2.295 5.171-1.355 1.134-5.447 2.959-6.581 3.456-1.161-.525-5.253-2.378-6.581-3.456-1.493-1.244-2.295-3.014-2.295-5.171V7.438zm12.664 2.599c.028.912.276 1.576 1.687 2.406.747.442 1.051.747 1.051 1.272 0 .581-.387.94-1.023.94-.553 0-1.189-.304-1.631-.691v1.576c.553.304 1.217.525 1.88.525 1.687 0 2.433-1.189 2.461-2.267.028-.995-.249-1.742-1.659-2.571-.608-.387-1.134-.636-1.106-1.244 0-.581.525-.802.995-.802.581 0 1.161.332 1.521.691V8.378c-.304-.221-.94-.581-1.88-.553-1.135.028-2.296.829-2.296 2.212zm-5.834 9.484h1.714l-.028-3.594c.166.028.415.083.774.083 1.908 0 2.986-1.687 2.986-4.175 0-2.461-1.106-4.009-3.152-4.009-.94 0-1.687.221-2.295.608v11.087zm-5.945-6.166c0 1.797.829 2.71 2.516 2.71 1.051 0 1.908-.249 2.571-.691V7.991H7.41v6.387c-.194.138-.47.221-.802.221-.774 0-.885-.719-.885-1.189V7.991H4.009v5.364zM22.12 2.295v11.723c0 2.516-.94 4.645-2.765 6.111-1.549 1.3-6.332 3.429-7.355 3.871-1.023-.442-5.806-2.571-7.355-3.843-1.797-1.465-2.765-3.594-2.765-6.111V2.295C4.756.747 8.074 0 12 0s7.244.747 10.12 2.295zm-.304.221c-2.71-1.465-6-2.184-9.788-2.184s-7.079.746-9.788 2.184v11.502c0 2.433.912 4.452 2.627 5.862 1.576 1.3 6.581 3.484 7.161 3.76.581-.249 5.585-2.433 7.161-3.733 1.714-1.41 2.627-3.429 2.627-5.862V2.516zm-2.433 20.295c0 .47-.387.829-.829.829a.831.831 0 0 1-.829-.829c0-.47.387-.829.829-.829.441 0 .801.359.829.829zm-.166 0a.679.679 0 0 0-.664-.691c-.359 0-.664.332-.664.691 0 .359.304.664.664.664a.673.673 0 0 0 .664-.664zm-.553.055c.028.055.304.442.304.442h-.221s-.276-.387-.276-.415h-.028v.415h-.194v-.995l.304-.028c.249 0 .332.166.332.304s-.083.25-.221.277zm.027-.276c0-.055 0-.138-.166-.138h-.083v.304h.028c.194 0 .221-.083.221-.166z"/></svg></div>
-      <div class="partner-card" style="--brand:#4D148C"><svg viewBox="0 0 24 24" aria-label="FedEx"><path d="M22.498 14.298c-.016-.414.345-.751.75-.755a.745.745 0 0 1 .752.755.755.755 0 0 1-.751.745c-.395.002-.759-.346-.751-.745zm.759-.083c.067-.02.164-.042.162-.13.007-.09-.086-.133-.162-.134h-.163v.263c0 .001.165-.002.163.001zm-.163.107v.418h-.14v-.91h.327c.156-.021.294.092.286.253a.218.218 0 0 1-.156.19c.162.083.108.322.173.467h-.156a2.355 2.355 0 0 1-.04-.205c-.018-.093-.047-.229-.17-.213h-.124zm.76-.024a.603.603 0 0 0-.605-.632c-.338-.012-.62.302-.605.632a.619.619 0 0 0 .605.622.61.61 0 0 0 .605-.622zm-5.052-.579l-.878 1.008h-1.306l1.559-1.745-1.56-1.75h1.355l.902.997.878-.998h1.306l-1.543 1.743 1.559 1.753h-1.371l-.901-1.008zm-4.703-.352v-.827h1.904v-1.506l1.724 1.948-1.724 1.941v-1.556h-1.904zm1.56 1.36h-3.2V9.044h3.224v1.024H13.77v1.163h1.888v.958h-1.904v1.522h1.904v1.016zm-5.705-.655c-.54.017-.878-.552-.877-1.04-.01-.507.307-1.123.878-1.105.579-.025.871.6.845 1.103.023.501-.29 1.062-.846 1.042zM4.743 12.41c.076-.358.403-.67.78-.663a.788.788 0 0 1 .803.663H4.743zm15.182.564l1.815-2.047h-2.125l-.74.844-.763-.844h-4.037v-.548h1.912V8.741H10.84v2.58c-.362-.448-.981-.559-1.526-.492-.782.123-1.427.762-1.634 1.514-.254-.958-1.179-1.588-2.157-1.554-.781.009-1.6.365-1.987 1.071v-.818h-1.87v-.9h2.043v-1.4H0v6.287h1.666v-2.644h1.666a7.59 7.59 0 0 0-.082.622c-.013 1.232 1.042 2.27 2.274 2.236a2.204 2.204 0 0 0 2.157-1.432H6.254c-.14.268-.441.38-.73.36-.457.009-.83-.417-.829-.86h2.914c.083 1.027.988 1.966 2.043 1.947a1.53 1.53 0 0 0 1.19-.639v.41h7.215l.754-.86.754.86h2.192l-1.832-2.055z"/></svg></div>
-      <div class="partner-card" style="--brand:#FF9900"><span class="wordmark">Amazon</span></div>
-      <div class="partner-card" style="--brand:#E53238"><svg viewBox="0 0 24 24" aria-label="eBay"><path d="M6.056 12.132v-4.92h1.2v3.026c.59-.703 1.402-.906 2.202-.906 1.34 0 2.828.904 2.828 2.855 0 .233-.015.457-.06.668.24-.953 1.274-1.305 2.896-1.344.51-.018 1.095-.018 1.56-.018v-.135c0-.885-.556-1.244-1.53-1.244-.72 0-1.245.3-1.305.81h-1.275c.136-1.29 1.5-1.62 2.686-1.62 1.064 0 1.995.27 2.415 1.02l-.436-.84h1.41l2.055 4.125 2.055-4.126H24l-3.72 7.305h-1.346l1.07-2.04-2.33-4.38c.13.255.2.555.2.93v2.46c0 .346.01.69.04 1.005H16.8a6.543 6.543 0 01-.046-.765c-.603.734-1.32.96-2.32.96-1.48 0-2.272-.78-2.272-1.695 0-.15.015-.284.037-.405-.3 1.246-1.36 2.086-2.767 2.086-.87 0-1.694-.315-2.2-.93 0 .24-.015.494-.04.734h-1.18c.02-.39.04-.855.04-1.245v-1.05h-4.83c.065 1.095.818 1.74 1.853 1.74.718 0 1.355-.3 1.568-.93h1.24c-.24 1.29-1.61 1.725-2.79 1.725C.95 15.009 0 13.822 0 12.232c0-1.754.982-2.91 3.116-2.91 1.688 0 2.93.886 2.94 2.806v.005zm9.137.183c-1.095.034-1.77.233-1.77.95 0 .465.36.97 1.305.97 1.26 0 1.935-.69 1.935-1.814v-.13c-.45 0-.99.006-1.484.022h.012zm-6.06 1.875c1.11 0 1.876-.806 1.876-2.02s-.768-2.02-1.893-2.02c-1.11 0-1.89.806-1.89 2.02s.765 2.02 1.875 2.02h.03zm-4.35-2.514c-.044-1.125-.854-1.546-1.725-1.546-.944 0-1.694.474-1.815 1.546z"/></svg></div>
-      <div class="partner-card"><span class="wordmark">Cirro</span></div>
-      <div class="partner-card" style="--brand:#7AB55C"><svg viewBox="0 0 24 24" aria-label="Shopify"><path d="M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411c-.045-.037-.075-.057-.121-.074l-.914 21.104h.023zM11.71 11.305s-.81-.424-1.774-.424c-1.447 0-1.504.906-1.504 1.141 0 1.232 3.24 1.715 3.24 4.629 0 2.295-1.44 3.76-3.406 3.76-2.354 0-3.54-1.465-3.54-1.465l.646-2.086s1.245 1.066 2.28 1.066c.675 0 .975-.545.975-.932 0-1.619-2.654-1.694-2.654-4.359-.034-2.237 1.571-4.416 4.827-4.416 1.257 0 1.875.361 1.875.361l-.945 2.715-.02.01zM11.17.83c.136 0 .271.038.405.135-.984.465-2.064 1.639-2.508 3.992-.656.213-1.293.405-1.889.578C7.697 3.75 8.951.84 11.17.84V.83zm1.235 2.949v.135c-.754.232-1.583.484-2.394.736.466-1.777 1.333-2.645 2.085-2.971.193.501.309 1.176.309 2.1zm.539-2.234c.694.074 1.141.867 1.429 1.755-.349.114-.735.231-1.158.366v-.252c0-.752-.096-1.371-.271-1.871v.002zm2.992 1.289c-.02 0-.06.021-.078.021s-.289.075-.714.21c-.423-1.233-1.176-2.37-2.508-2.37h-.115C12.135.209 11.669 0 11.265 0 8.159 0 6.675 3.877 6.21 5.846c-1.194.365-2.063.636-2.16.674-.675.213-.694.232-.772.87-.075.462-1.83 14.063-1.83 14.063L15.009 24l.927-21.166z"/></svg></div>
-      <div class="partner-card" style="--brand:#FFCC00"><svg viewBox="0 0 24 24" aria-label="DHL"><path d="M4.22 10.303l-.767 1.043h4.18c.21 0 .208.078.105.218-.105.142-.28.39-.386.534-.054.073-.154.207.171.207h1.71l.505-.69c.314-.426.028-1.312-1.095-1.312H4.22zm7.204 0l-1.475 2.002h5.39l1.473-2.002H14.61l-.843 1.146h-.985l.846-1.146h-2.203zm6.105 0l-1.474 2.002h2.334l1.472-2.002H17.53zm-12.845 1.3l-1.54 2.094h3.754c1.24 0 1.932-.844 2.145-1.136h-2.56c-.326 0-.226-.133-.172-.207.107-.143.283-.388.388-.53.104-.14.107-.22-.105-.22h-1.91zM0 12.562v.242h3.398l.176-.242H0zm9.762 0l-.836 1.136h2.203l.836-1.136H9.762zm3.185 0l-.836 1.136h2.203l.836-1.136h-2.203zm2.918 0s-.159.22-.238.326c-.276.374-.033.81.87.81h3.538l.834-1.136h-5.004zm5.408 0l-.177.242H24v-.242h-2.727zM0 13.01v.24h3.068l.178-.24H0zm20.943 0l-.175.24H24v-.24h-3.057zM0 13.457v.24h2.74l.176-.24H0zm20.615 0l-.177.24H24v-.24h-3.385z"/></svg></div>
-      <div class="partner-card" style="--brand:#333366"><svg viewBox="0 0 24 24" aria-label="USPS"><path d="M3.145 4.577L0 19.423h20.855L24 4.577H3.145zm-.157 3.806h9.436c.157 0 5.064 0 5.159.975H9.09l1.321 4.026c1.51-.723 5.222-2.233 7.455-2.328.944-.031 1.321.126 1.132.252-.126.063-1.038.189-1.761.377-1.258.315-1.321.315-2.642.755-1.478.503-2.705 1.069-4.53 1.919L.723 18.983l2.265-10.6zm16.483 1.698c-.535-.094-2.768.063-3.334.063-.126 0-.472.031-.472-.063 0-.063.126-.063.377-.094s1.006-.157 1.258-.283c.063-.063.22-.157.315-.252.031-.063.063-.094.157-.094h1.164c.755 0 1.195.094 1.132.723-.031.315-.472 1.132-.629 1.384-.063.094-.189.189-.157 0 .126-.503.597-1.321.189-1.384zm.88 8.902H2.076s17.363-6.794 17.552-6.92c0 0 1.541-2.076.629-2.925-.283-.283-.692-.283-2.265-.283 0 0-.063-.598-2.485-1.164-.283-.063-11.858-2.517-11.858-2.517h19.628l-2.926 13.809zm2.925-.695c0-.195-.114-.293-.358-.293h-.406v1.008h.146v-.439h.179l.276.455h.179L23 18.564c.162-.016.276-.097.276-.276zm-.455.146h-.163v-.341h.211c.114 0 .228.016.228.163 0 .162-.13.178-.276.178zm.016-.829a.868.868 0 0 0-.894.878c0 .504.406.894.894.894s.894-.39.894-.894a.878.878 0 0 0-.894-.878zm0 1.642c-.423 0-.731-.325-.731-.764 0-.423.325-.748.731-.748.406 0 .731.325.731.748 0 .439-.325.764-.731.764z"/></svg></div>
-      <div class="partner-card" style="--brand:#150400"><svg viewBox="0 0 24 24" aria-label="UPS"><path d="M11.668 14.544l-.028-5.226c.138-.055.387-.111.608-.111.995 0 1.41.774 1.41 2.682 0 1.853-.47 2.765-1.438 2.765-.22 0-.441-.055-.552-.11zM3.124 7.438c4.203-3.843 9.29-4.866 14.018-4.866 1.3 0 2.544.083 3.76.194h-.028v11.253c0 2.184-.774 3.926-2.295 5.171-1.355 1.134-5.447 2.959-6.581 3.456-1.161-.525-5.253-2.378-6.581-3.456-1.493-1.244-2.295-3.014-2.295-5.171V7.438zm12.664 2.599c.028.912.276 1.576 1.687 2.406.747.442 1.051.747 1.051 1.272 0 .581-.387.94-1.023.94-.553 0-1.189-.304-1.631-.691v1.576c.553.304 1.217.525 1.88.525 1.687 0 2.433-1.189 2.461-2.267.028-.995-.249-1.742-1.659-2.571-.608-.387-1.134-.636-1.106-1.244 0-.581.525-.802.995-.802.581 0 1.161.332 1.521.691V8.378c-.304-.221-.94-.581-1.88-.553-1.135.028-2.296.829-2.296 2.212zm-5.834 9.484h1.714l-.028-3.594c.166.028.415.083.774.083 1.908 0 2.986-1.687 2.986-4.175 0-2.461-1.106-4.009-3.152-4.009-.94 0-1.687.221-2.295.608v11.087zm-5.945-6.166c0 1.797.829 2.71 2.516 2.71 1.051 0 1.908-.249 2.571-.691V7.991H7.41v6.387c-.194.138-.47.221-.802.221-.774 0-.885-.719-.885-1.189V7.991H4.009v5.364zM22.12 2.295v11.723c0 2.516-.94 4.645-2.765 6.111-1.549 1.3-6.332 3.429-7.355 3.871-1.023-.442-5.806-2.571-7.355-3.843-1.797-1.465-2.765-3.594-2.765-6.111V2.295C4.756.747 8.074 0 12 0s7.244.747 10.12 2.295zm-.304.221c-2.71-1.465-6-2.184-9.788-2.184s-7.079.746-9.788 2.184v11.502c0 2.433.912 4.452 2.627 5.862 1.576 1.3 6.581 3.484 7.161 3.76.581-.249 5.585-2.433 7.161-3.733 1.714-1.41 2.627-3.429 2.627-5.862V2.516zm-2.433 20.295c0 .47-.387.829-.829.829a.831.831 0 0 1-.829-.829c0-.47.387-.829.829-.829.441 0 .801.359.829.829zm-.166 0a.679.679 0 0 0-.664-.691c-.359 0-.664.332-.664.691 0 .359.304.664.664.664a.673.673 0 0 0 .664-.664zm-.553.055c.028.055.304.442.304.442h-.221s-.276-.387-.276-.415h-.028v.415h-.194v-.995l.304-.028c.249 0 .332.166.332.304s-.083.25-.221.277zm.027-.276c0-.055 0-.138-.166-.138h-.083v.304h.028c.194 0 .221-.083.221-.166z"/></svg></div>
-      <div class="partner-card" style="--brand:#4D148C"><svg viewBox="0 0 24 24" aria-label="FedEx"><path d="M22.498 14.298c-.016-.414.345-.751.75-.755a.745.745 0 0 1 .752.755.755.755 0 0 1-.751.745c-.395.002-.759-.346-.751-.745zm.759-.083c.067-.02.164-.042.162-.13.007-.09-.086-.133-.162-.134h-.163v.263c0 .001.165-.002.163.001zm-.163.107v.418h-.14v-.91h.327c.156-.021.294.092.286.253a.218.218 0 0 1-.156.19c.162.083.108.322.173.467h-.156a2.355 2.355 0 0 1-.04-.205c-.018-.093-.047-.229-.17-.213h-.124zm.76-.024a.603.603 0 0 0-.605-.632c-.338-.012-.62.302-.605.632a.619.619 0 0 0 .605.622.61.61 0 0 0 .605-.622zm-5.052-.579l-.878 1.008h-1.306l1.559-1.745-1.56-1.75h1.355l.902.997.878-.998h1.306l-1.543 1.743 1.559 1.753h-1.371l-.901-1.008zm-4.703-.352v-.827h1.904v-1.506l1.724 1.948-1.724 1.941v-1.556h-1.904zm1.56 1.36h-3.2V9.044h3.224v1.024H13.77v1.163h1.888v.958h-1.904v1.522h1.904v1.016zm-5.705-.655c-.54.017-.878-.552-.877-1.04-.01-.507.307-1.123.878-1.105.579-.025.871.6.845 1.103.023.501-.29 1.062-.846 1.042zM4.743 12.41c.076-.358.403-.67.78-.663a.788.788 0 0 1 .803.663H4.743zm15.182.564l1.815-2.047h-2.125l-.74.844-.763-.844h-4.037v-.548h1.912V8.741H10.84v2.58c-.362-.448-.981-.559-1.526-.492-.782.123-1.427.762-1.634 1.514-.254-.958-1.179-1.588-2.157-1.554-.781.009-1.6.365-1.987 1.071v-.818h-1.87v-.9h2.043v-1.4H0v6.287h1.666v-2.644h1.666a7.59 7.59 0 0 0-.082.622c-.013 1.232 1.042 2.27 2.274 2.236a2.204 2.204 0 0 0 2.157-1.432H6.254c-.14.268-.441.38-.73.36-.457.009-.83-.417-.829-.86h2.914c.083 1.027.988 1.966 2.043 1.947a1.53 1.53 0 0 0 1.19-.639v.41h7.215l.754-.86.754.86h2.192l-1.832-2.055z"/></svg></div>
-      <div class="partner-card" style="--brand:#FF9900"><span class="wordmark">Amazon</span></div>
-      <div class="partner-card" style="--brand:#E53238"><svg viewBox="0 0 24 24" aria-label="eBay"><path d="M6.056 12.132v-4.92h1.2v3.026c.59-.703 1.402-.906 2.202-.906 1.34 0 2.828.904 2.828 2.855 0 .233-.015.457-.06.668.24-.953 1.274-1.305 2.896-1.344.51-.018 1.095-.018 1.56-.018v-.135c0-.885-.556-1.244-1.53-1.244-.72 0-1.245.3-1.305.81h-1.275c.136-1.29 1.5-1.62 2.686-1.62 1.064 0 1.995.27 2.415 1.02l-.436-.84h1.41l2.055 4.125 2.055-4.126H24l-3.72 7.305h-1.346l1.07-2.04-2.33-4.38c.13.255.2.555.2.93v2.46c0 .346.01.69.04 1.005H16.8a6.543 6.543 0 01-.046-.765c-.603.734-1.32.96-2.32.96-1.48 0-2.272-.78-2.272-1.695 0-.15.015-.284.037-.405-.3 1.246-1.36 2.086-2.767 2.086-.87 0-1.694-.315-2.2-.93 0 .24-.015.494-.04.734h-1.18c.02-.39.04-.855.04-1.245v-1.05h-4.83c.065 1.095.818 1.74 1.853 1.74.718 0 1.355-.3 1.568-.93h1.24c-.24 1.29-1.61 1.725-2.79 1.725C.95 15.009 0 13.822 0 12.232c0-1.754.982-2.91 3.116-2.91 1.688 0 2.93.886 2.94 2.806v.005zm9.137.183c-1.095.034-1.77.233-1.77.95 0 .465.36.97 1.305.97 1.26 0 1.935-.69 1.935-1.814v-.13c-.45 0-.99.006-1.484.022h.012zm-6.06 1.875c1.11 0 1.876-.806 1.876-2.02s-.768-2.02-1.893-2.02c-1.11 0-1.89.806-1.89 2.02s.765 2.02 1.875 2.02h.03zm-4.35-2.514c-.044-1.125-.854-1.546-1.725-1.546-.944 0-1.694.474-1.815 1.546z"/></svg></div>
+    <div class="team-grid">
+      <article class="team-card">
+        <div class="team-ph"><span class="mono">AR</span></div>
+        <div class="team-name">Alina Reyes</div>
+        <div class="team-role">Founder &amp; CEO</div>
+        <p>Alina started Box It in 2019 packing nutraceutical orders for a single brand out of a small unit in Millcreek. She still reads the exception report every morning. Her rule hasn't changed: if we wouldn't send it to our own customer, it doesn't leave the building.</p>
+      </article>
+      <article class="team-card">
+        <div class="team-ph"><span class="mono">PN</span></div>
+        <div class="team-name">Priya Nair</div>
+        <div class="team-role">Head of Operations</div>
+        <p>Priya runs the warehouse floor and the people on it. She built the receiving and QC process that keeps order accuracy at 100%. If a count looks off or a shipment is running late, she already knows and is on it.</p>
+      </article>
+      <article class="team-card">
+        <div class="team-ph"><span class="mono">DW</span></div>
+        <div class="team-name">Dana Whitfield</div>
+        <div class="team-role">Client Success Lead</div>
+        <p>Dana is the person on the other end of the phone. She onboards every new brand herself and stays your point of contact after go-live, so you're never re-explaining your account to someone new.</p>
+      </article>
+      <article class="team-card">
+        <div class="team-ph"><span class="mono">MC</span></div>
+        <div class="team-name">Marisol Cortez</div>
+        <div class="team-role">Compliance &amp; Cross-Border</div>
+        <p>Marisol handles customs classification, duties, and the paperwork that keeps international orders moving. She's the reason parcels clear the border instead of sitting at it.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -198,7 +277,7 @@
   <div class="wrap quote-grid">
     <div>
       <div class="eyebrow">GET STARTED</div>
-      <h2 style="margin-top:12px;font-size:36px">Let's get your first shipment moving</h2>
+      <h2 style="margin-top:12px">Let's get your first shipment moving</h2>
       <p class="lede">Tell us what you're shipping and where it's going. We'll reply with a straightforward quote within 24 hours, no sales runaround.</p>
       <div style="display:flex;flex-direction:column;gap:14px;margin-top:28px">
         <div class="contact-row"><span class="ci"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg></span><a href="tel:+18776942424">(877) 694-2424</a></div>
@@ -209,20 +288,22 @@
     <div class="formcard">
       <form onsubmit="return false">
         <div class="fgrid">
-          <div class="field"><label>First Name *</label><input name="First Name" placeholder="Jane"></div>
-          <div class="field"><label>Last Name *</label><input name="Last Name" placeholder="Doe"></div>
-          <div class="field"><label>Email *</label><input name="Email" placeholder="jane@brand.com" type="email"></div>
-          <div class="field"><label>Company *</label><input name="Company" placeholder="Brand Co."></div>
-          <div class="field"><label>Service Needs</label><select name="Service Needs"><option>Select a service</option><option>Fulfillment Services</option><option>Warehousing</option><option>Shipping Solutions</option><option>Inventory Management</option><option>Returns Processing</option><option>International Shipping</option></select></div>
-          <div class="field"><label>Shipping To</label><select name="Shipping To"><option>Select destination</option><option>United States (domestic)</option><option>Canada</option><option>United Kingdom</option><option>European Union</option><option>Multiple / not sure</option></select></div>
+          <div class="field"><label for="f-first">First Name *</label><input id="f-first" name="First Name" placeholder="Jane"></div>
+          <div class="field"><label for="f-last">Last Name *</label><input id="f-last" name="Last Name" placeholder="Doe"></div>
+          <div class="field"><label for="f-email">Email *</label><input id="f-email" name="Email" placeholder="jane@brand.com" type="email"></div>
+          <div class="field"><label for="f-company">Company *</label><input id="f-company" name="Company" placeholder="Brand Co."></div>
+          <div class="field"><label for="f-service">Service Needs</label><select id="f-service" name="Service Needs"><option>Select a service</option><option>Fulfillment Services</option><option>Warehousing</option><option>Shipping Solutions</option><option>Inventory Management</option><option>Returns Processing</option><option>International Shipping</option></select></div>
+          <div class="field"><label for="f-dest">Shipping To</label><select id="f-dest" name="Shipping To"><option>Select destination</option><option>United States (domestic)</option><option>Canada</option><option>United Kingdom</option><option>European Union</option><option>Multiple / not sure</option></select></div>
         </div>
-        <div class="field full"><label>Monthly Volume</label><select name="Monthly Volume"><option>Select range</option><option>1–50 orders</option><option>51–200 orders</option><option>201–500 orders</option><option>501–1000 orders</option><option>1000+ orders</option></select></div>
-        <div class="field full"><label>Message</label><textarea name="Message" placeholder="Tell us about your business…"></textarea></div>
+        <div class="field full"><label for="f-vol">Monthly Volume</label><select id="f-vol" name="Monthly Volume"><option>Select range</option><option>1–50 orders</option><option>51–200 orders</option><option>201–500 orders</option><option>501–1000 orders</option><option>1000+ orders</option></select></div>
+        <div class="field full"><label for="f-msg">Message</label><textarea id="f-msg" name="Message" placeholder="Tell us about your business…"></textarea></div>
         <button class="btn btn-primary" style="width:100%;margin-top:18px">Send Message</button>
       </form>
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ============ FOOTER ============ -->
 <footer class="site">
@@ -249,15 +330,15 @@
     </div>
     <form class="modal-body" onsubmit="return false">
       <div class="fgrid">
-        <div class="field"><label>First Name *</label><input name="First Name" placeholder="Jane"></div>
-        <div class="field"><label>Last Name *</label><input name="Last Name" placeholder="Doe"></div>
-        <div class="field"><label>Email *</label><input name="Email" placeholder="jane@brand.com" type="email"></div>
-        <div class="field"><label>Company *</label><input name="Company" placeholder="Brand Co."></div>
-        <div class="field"><label>Service Needs</label><select name="Service Needs"><option>Select a service</option><option>Fulfillment Services</option><option>Warehousing</option><option>Shipping Solutions</option><option>Inventory Management</option><option>Returns Processing</option><option>International Shipping</option></select></div>
-        <div class="field"><label>Shipping To</label><select name="Shipping To"><option>Select destination</option><option>United States (domestic)</option><option>Canada</option><option>United Kingdom</option><option>European Union</option><option>Multiple / not sure</option></select></div>
+        <div class="field"><label for="m-first">First Name *</label><input id="m-first" name="First Name" placeholder="Jane"></div>
+        <div class="field"><label for="m-last">Last Name *</label><input id="m-last" name="Last Name" placeholder="Doe"></div>
+        <div class="field"><label for="m-email">Email *</label><input id="m-email" name="Email" placeholder="jane@brand.com" type="email"></div>
+        <div class="field"><label for="m-company">Company *</label><input id="m-company" name="Company" placeholder="Brand Co."></div>
+        <div class="field"><label for="m-service">Service Needs</label><select id="m-service" name="Service Needs"><option>Select a service</option><option>Fulfillment Services</option><option>Warehousing</option><option>Shipping Solutions</option><option>Inventory Management</option><option>Returns Processing</option><option>International Shipping</option></select></div>
+        <div class="field"><label for="m-dest">Shipping To</label><select id="m-dest" name="Shipping To"><option>Select destination</option><option>United States (domestic)</option><option>Canada</option><option>United Kingdom</option><option>European Union</option><option>Multiple / not sure</option></select></div>
       </div>
-      <div class="field full"><label>Monthly Volume</label><select name="Monthly Volume"><option>Select range</option><option>1–50 orders</option><option>51–200 orders</option><option>201–500 orders</option><option>501–1000 orders</option><option>1000+ orders</option></select></div>
-      <div class="field full"><label>Message</label><textarea name="Message" placeholder="Tell us about your products, destinations, and volume…"></textarea></div>
+      <div class="field full"><label for="m-vol">Monthly Volume</label><select id="m-vol" name="Monthly Volume"><option>Select range</option><option>1–50 orders</option><option>51–200 orders</option><option>201–500 orders</option><option>501–1000 orders</option><option>1000+ orders</option></select></div>
+      <div class="field full"><label for="m-msg">Message</label><textarea id="m-msg" name="Message" placeholder="Tell us about your products, destinations, and volume…"></textarea></div>
       <button class="btn btn-primary" style="width:100%;margin-top:18px">Send Message</button>
     </form>
   </div>

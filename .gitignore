@@ -1,0 +1,7 @@
+# Raw asset archive — source only, not served by the site (93 MB)
+Assets/boxit_assets.zip
+Assets/boxit_assets_extracted/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
