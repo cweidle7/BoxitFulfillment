@@ -60,11 +60,21 @@
     <div class="hero-home-copy">
       <span class="badge"><span class="dot"></span>3PL · FULFILLMENT · LOGISTICS</span>
       <h1>The 3PL that <span class="hl">still answers the phone</span></h1>
-      <p class="lede">Warehousing and fulfillment for e-commerce, B2B, Amazon, and DTC brands — received, stored, and shipped quickly, correctly, and with care, so you can get back to building the business.</p>
-      <div class="hero-actions">
-        <button class="btn btn-primary" data-open-quote>Get a Quote<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
-        <a class="btn btn-ghost" href="#how">See how it works</a>
-      </div>
+      <p class="lede">Warehousing and fulfillment for e-commerce, B2B, Amazon, and DTC brands — shipped quickly, correctly, and with care.</p>
+      <form class="hero-quote" onsubmit="return false" aria-labelledby="hq-title">
+        <div class="hq-head"><span id="hq-title">Get a Quote</span><span class="hq-note">Reply within 24 hrs</span></div>
+        <div class="fgrid">
+          <div class="field"><label for="h-first">First Name *</label><input id="h-first" name="First Name" placeholder="Jane" autocomplete="given-name"></div>
+          <div class="field"><label for="h-last">Last Name *</label><input id="h-last" name="Last Name" placeholder="Doe" autocomplete="family-name"></div>
+          <div class="field"><label for="h-email">Email *</label><input id="h-email" name="Email" placeholder="jane@brand.com" type="email" autocomplete="email"></div>
+          <div class="field"><label for="h-company">Company *</label><input id="h-company" name="Company" placeholder="Brand Co." autocomplete="organization"></div>
+          <div class="field"><label for="h-service">Service Needs</label><select id="h-service" name="Service Needs"><option>Select a service</option><option>Fulfillment Services</option><option>Warehousing</option><option>Shipping Solutions</option><option>Inventory Management</option><option>Returns Processing</option><option>International Shipping</option></select></div>
+          <div class="field"><label for="h-dest">Shipping To</label><select id="h-dest" name="Shipping To"><option>Select destination</option><option>United States (domestic)</option><option>Canada</option><option>United Kingdom</option><option>European Union</option><option>Multiple / not sure</option></select></div>
+        </div>
+        <div class="field full"><label for="h-vol">Monthly Volume</label><select id="h-vol" name="Monthly Volume"><option>Select range</option><option>1–50 orders</option><option>51–200 orders</option><option>201–500 orders</option><option>501–1000 orders</option><option>1000+ orders</option></select></div>
+        <button class="btn btn-primary">Get My Quote<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+      </form>
+      <a class="sec-link hq-link" href="#how">See how it works<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
     </div>
     <div class="hero-home-media">
       <div class="hero-frame">

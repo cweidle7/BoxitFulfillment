@@ -298,11 +298,19 @@ footer.site{background:var(--ink);color:#fff;padding:48px 0 32px;border-top:3px 
   gap:clamp(22px,3.5vw,60px);align-items:center;
   padding-left:max(clamp(20px,5vw,40px),calc(50% - 566px));padding-right:0}
 .hero-home-copy{padding:clamp(8px,3vw,28px) 0}
-.hero-home-copy h1{font:800 clamp(2.55rem,1.1rem + 5.1vw,4.2rem)/1.0 'Archivo',sans-serif;
+.hero-home-copy h1{font:800 clamp(2.3rem,1.2rem + 3.8vw,3.4rem)/1.0 'Archivo',sans-serif;
   letter-spacing:-.03em;margin-top:20px;text-wrap:balance}
 .hero-home-copy h1 .hl{color:var(--blue)}
-.hero-home-copy .lede{max-width:430px}
-.hero-home-copy .hero-actions{margin-top:30px}
+.hero-home-copy .lede{max-width:430px;margin-top:16px}
+.hero-quote{margin-top:24px;padding:20px 20px 22px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-card)}
+.hq-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px}
+.hq-head>span:first-child{font:700 19px 'Archivo',sans-serif;color:var(--ink)}
+.hq-note{font:600 10.5px 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.hero-quote .fgrid{gap:12px}
+.hero-quote .field input,.hero-quote .field select{padding:10px 12px}
+.hero-quote .btn{width:100%;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:16px}
+.hq-link{margin-top:16px}
+@media(max-width:420px){.hero-quote .fgrid{grid-template-columns:1fr}}
 
 .hero-home-media{position:relative}
 .hero-frame{position:relative;z-index:1;aspect-ratio:3/2;max-height:76vh;border-radius:var(--r-lg) 0 0 var(--r-lg);overflow:hidden;
