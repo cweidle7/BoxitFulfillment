@@ -244,4 +244,57 @@
     }, { passive: true });
     updateParallax();
   }
+
+  /* ---------- Quote / contact forms -> Formspree ---------- */
+  // Paste the form ID from Formspree (the part after /f/) to go live.
+  var FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+  var formsLive = FORMSPREE_ENDPOINT.indexOf("YOUR_FORM_ID") === -1;
+  var MSG_OK = "Thanks! We got your request and will reply within 24 hours.";
+  var MSG_ERR = "Something went wrong sending your request. Please call (801) 449-1203 or email support@boxitfulfillment.com.";
+  var MSG_OFFLINE = "Online requests aren't switched on yet. Please call (801) 449-1203 or email support@boxitfulfillment.com.";
+
+  function setStatus(form, text, kind) {
+    var status = form.querySelector(".form-status");
+    if (!status) {
+      status = document.createElement("p");
+      status.className = "form-status";
+      status.setAttribute("role", "status");
+      form.appendChild(status);
+    }
+    status.textContent = text;
+    status.classList.toggle("ok", kind === "ok");
+    status.classList.toggle("err", kind === "err");
+  }
+
+  document.querySelectorAll("form[data-formspree]").forEach(function (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!formsLive) {
+        setStatus(form, MSG_OFFLINE, "err");
+        return;
+      }
+      var button = form.querySelector("button[type=submit], button:not([type])");
+      var buttonHtml = button && button.innerHTML;
+      var page = location.pathname.split("/").pop() || "index.html";
+      var source = form.getAttribute("data-form-name") + " (" + page + ")";
+      var data = new FormData(form);
+      data.append("Form", source);
+      data.append("_subject", "New quote request: " + source);
+      if (button) { button.disabled = true; button.textContent = "Sending…"; }
+      setStatus(form, "", null);
+
+      fetch(FORMSPREE_ENDPOINT, { method: "POST", body: data, headers: { Accept: "application/json" } })
+        .then(function (res) {
+          if (!res.ok) throw new Error("Formspree " + res.status);
+          form.reset();
+          setStatus(form, MSG_OK, "ok");
+        })
+        .catch(function () {
+          setStatus(form, MSG_ERR, "err");
+        })
+        .then(function () {
+          if (button) { button.disabled = false; button.innerHTML = buttonHtml; }
+        });
+    });
+  });
 })();

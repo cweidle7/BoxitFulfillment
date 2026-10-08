@@ -256,6 +256,11 @@ a.card:hover,.card.hover:hover{border-color:var(--blue);box-shadow:0 14px 32px -
 .field input,.field select,.field textarea{width:100%;min-width:0;border:1px solid #D8E0EE;border-radius:7px;padding:11px 13px;font:400 14px 'Public Sans';outline:none;background:#fff;transition:border-color .15s ease}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);outline:3px solid rgba(46,107,255,.18);outline-offset:0}
 .field textarea{min-height:80px;resize:vertical}
+.form-status{font:500 13.5px/1.5 'Public Sans',sans-serif;margin-top:12px}
+.form-status:empty{display:none}
+.form-status.ok{color:#0F7B4A}
+.form-status.err{color:#B42318}
+button[disabled]{opacity:.7;cursor:progress}
 .full{margin-top:14px}
 
 /* Footer */

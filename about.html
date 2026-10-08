@@ -256,16 +256,16 @@
       <p>We'll get back to you within 24 hours.</p>
       <button class="modal-close" data-close-quote aria-label="Close">×</button>
     </div>
-    <form class="modal-body" onsubmit="return false">
+    <form class="modal-body" data-formspree data-form-name="Quote popup">
       <div class="fgrid">
-        <div class="field"><label for="m-first">First Name *</label><input id="m-first" name="First Name" placeholder="Jane"></div>
-        <div class="field"><label for="m-last">Last Name *</label><input id="m-last" name="Last Name" placeholder="Doe"></div>
-        <div class="field"><label for="m-email">Email *</label><input id="m-email" name="Email" placeholder="jane@brand.com" type="email"></div>
-        <div class="field"><label for="m-company">Company *</label><input id="m-company" name="Company" placeholder="Brand Co."></div>
-        <div class="field"><label for="m-service">Service Needs</label><select id="m-service" name="Service Needs"><option>Select a service</option><option>Fulfillment Services</option><option>Warehousing</option><option>Shipping Solutions</option><option>Inventory Management</option><option>Returns Processing</option><option>International Shipping</option></select></div>
-        <div class="field"><label for="m-dest">Shipping To</label><select id="m-dest" name="Shipping To"><option>Select destination</option><option>United States (domestic)</option><option>Canada</option><option>United Kingdom</option><option>European Union</option><option>Multiple / not sure</option></select></div>
+        <div class="field"><label for="m-first">First Name *</label><input id="m-first" name="First Name" required placeholder="Jane"></div>
+        <div class="field"><label for="m-last">Last Name *</label><input id="m-last" name="Last Name" required placeholder="Doe"></div>
+        <div class="field"><label for="m-email">Email *</label><input id="m-email" name="Email" required placeholder="jane@brand.com" type="email"></div>
+        <div class="field"><label for="m-company">Company *</label><input id="m-company" name="Company" required placeholder="Brand Co."></div>
+        <div class="field"><label for="m-service">Service Needs</label><select id="m-service" name="Service Needs"><option value="">Select a service</option><option>Fulfillment Services</option><option>Warehousing</option><option>Shipping Solutions</option><option>Inventory Management</option><option>Returns Processing</option><option>International Shipping</option></select></div>
+        <div class="field"><label for="m-dest">Shipping To</label><select id="m-dest" name="Shipping To"><option value="">Select destination</option><option>United States (domestic)</option><option>Canada</option><option>United Kingdom</option><option>European Union</option><option>Multiple / not sure</option></select></div>
       </div>
-      <div class="field full"><label for="m-vol">Monthly Volume</label><select id="m-vol" name="Monthly Volume"><option>Select range</option><option>1–50 orders</option><option>51–200 orders</option><option>201–500 orders</option><option>501–1000 orders</option><option>1000+ orders</option></select></div>
+      <div class="field full"><label for="m-vol">Monthly Volume</label><select id="m-vol" name="Monthly Volume"><option value="">Select range</option><option>1–50 orders</option><option>51–200 orders</option><option>201–500 orders</option><option>501–1000 orders</option><option>1000+ orders</option></select></div>
       <div class="field full"><label for="m-msg">Message</label><textarea id="m-msg" name="Message" placeholder="Tell us about your products, destinations, and volume…"></textarea></div>
       <button class="btn btn-primary" style="width:100%;margin-top:18px">Send Message</button>
     </form>
